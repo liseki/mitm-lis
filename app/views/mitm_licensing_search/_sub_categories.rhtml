@@ -1,0 +1,9 @@
+<label class="cat_label">Sub-Category: </label>
+<% name = "sub_category" + @num.to_s %>
+<%= select 'licence_application', name, [["sub category", "0"]] + @sub_categories.collect {|cat| [cat.name, cat.id]} %> 
+<% id = "sub_cat_loading" + @num.to_s %>
+<span class="load_indicator" id=<%= id %> style="display: none;"><%= image_tag 'loading2.gif' %></span>
+
+<% field = "licence_application_" + name %>
+<%= observe_field(field, :url => {:controller => "mitm_licensing_search", :action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('#{id}')", :complete => "new Element.hide('#{id}')") %>

@@ -1,0 +1,8 @@
+<div class="error_msg_title">The following error<%if @old_licence.errors.size > 1%>s<%end%> 
+prevented the licence update!</div>
+
+<ul>
+<% @old_licence.errors.each do |attr, msg| %>
+    <li><%= msg %></li>
+<% end -%>
+</ul>

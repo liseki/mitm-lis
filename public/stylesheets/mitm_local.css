@@ -1,0 +1,236 @@
+div#main4, div#main3, div#main2, div#main1 { position: relative; }
+div#main4 {
+	width: 740px;
+	margin:	0 auto;
+	background: #fff url(../images/main_top_left.gif) left top no-repeat;	
+	color: #000;
+}
+div#main3 { background: url(../images/main_top_right.gif) right top no-repeat; }
+div#main2 { background: url(../images/main_bottom_left.gif) left bottom no-repeat; }
+div#main1 { 
+	background: url(../images/main_bottom_right.gif) right bottom no-repeat; 
+	padding-top: 10px; }
+div#nav { margin-top: 5px; padding: 0 10px; }
+span.nav { margin-right: 15px; }
+div#content { position: relative; padding: 5px 9px 9px 9px; }	
+div#header4, div#header3, div#header2, div#header2 { position: relative; }
+div#header4 { 
+	width: 720px;
+	margin: 0 auto;
+	text-align: center; 
+	color: white;
+	background: #0080c0 url(../images/header_top_left.gif) left top no-repeat; }
+div#header3 { background: url(../images/header_top_right.gif) right top no-repeat; }
+div#header2 { background: url(../images/header_bottom_left.gif) left bottom no-repeat; }
+div#header1 { background: url(../images/header_bottom_right.gif) right bottom no-repeat; }
+div#edit_licence { position: relative; }
+div#login { margin-left: 250px; padding: 10px 0; }
+p#login_2 { margin: 5px 0; }
+
+table#new_user { table-layout: fixed; }	
+
+div#report { background-color: #fff; width: 740px; margin: 0 auto; }
+div.mitm_report { padding: 10px; }
+div#report_stamp { font-size: 10px; text-align: left; margin-bottom: 20px; }
+
+
+/*-----------------------------------------------------------------------*/
+/* admin */
+span.cat_menu { margin-left: 20px; }
+label.cat_label { font-weight: bold; color: #0080c0; }
+label#cat { margin-right: 24px; }
+label#ren_cat { margin-right: 2px; }
+label#del_cat { margin-right: 13px; }
+label#mov_cat {margin-right: 18px; }
+span#select_parent, span#cat_move { padding-left:146px; }
+span#cat_rename { margin-left: 146px; }
+input#category_name { margin-top: 2px; }
+select#category_parent_id { margin-top: 2px; }
+input#cancel_new_category_bt { position: absolute; top: 20px; right: 20px; }
+span#select_category2, span#select_category3 { padding-left: 1px; }
+
+div.category_header4, div.category_header3, div.category_header2, div.category_header1 { 
+	position: relative; }
+div.category_header4 { 
+	background: #dee url(../images/cat_header_top_left.gif) left top no-repeat; 
+	border: 1px solid white; }
+div.category_header3 { background: url(../images/cat_header_top_right.gif) right top no-repeat; }
+div.category_header2 { background: url(../images/cat_header_bottom_left.gif) left bottom no-repeat; }
+div.category_header1 { 
+	background: url(../images/cat_header_bottom_right.gif) right bottom no-repeat; 
+	padding: 10px; }
+div#categories { height: 320px; border: 1px solid #ddd; }
+div.categories4, div.categories3, div.categories2, div.categories1 { position: relative; }
+div.categories4 { 
+	background: #ddd url(../images/cat_top_left.gif) left top no-repeat; 
+	border: 1px solid white;
+	margin-top: 9px; }
+div.categories3 { background: url(../images/cat_top_right.gif) right top no-repeat; }	
+div.categories2 { background: url(../images/cat_bottom_left.gif) left bottom no-repeat; }	
+div.categories1 { 
+	background: url(../images/cat_bottom_right.gif) right bottom no-repeat; 
+	padding: 10px; }
+	
+div#category_list2 { padding: 5px; background-color: #fff; }
+div#category_list {
+	height: 310px;
+	overflow: auto; }
+div#category_list p { 
+	margin-bottom: 3px; 
+	padding-left: 20px;
+	background: url(../images/cat_img.gif) left center no-repeat; }
+p.cat_2 { margin-left: 20px; }
+p.cat_3 { margin-left: 40px; }
+p.cat_4 { margin-left: 60px; }
+p.cat_5 { margin-left: 80px; }
+p.cat_6 { margin-left: 100px; }
+p.cat_7 { margin-left: 120px; }
+p.cat_8 { margin-left: 140px; }
+p.cat_9 { margin-left: 160px; }
+p.cat_10 { margin-left: 180px; }
+p.cat_11 { margin-left: 200px; }
+
+table#users { width: 550px; margin: 5px auto 0 auto; }
+table#users td.name , table#users th.name { width: 40%; border-bottom: 1px solid #fff; border-right: 1px solid #fff; }
+table#users td.type, table#users th.type { width: 20%; border-bottom: 1px solid #fff; border-right: 1px solid #fff; }
+table#users td.id, table#users th.id { width: 5%; border-bottom: 1px solid #fff; border-right: 1px solid #fff; }
+table#users td.since, table#users th.since { width: 15%; border-bottom: 1px solid #fff; border-right: 1px solid #fff; }
+table#users td.remove, table#users th.remove { width: 20%; border-bottom: 1px solid #fff; }
+table#users td.id, table#users th.id, table#users td.remove { text-align: center; }
+table#users td.remove a { text-decoration: none; }
+span#new_user_bt { position: absolute; top: 10px; right: 20px; }
+span#change_root { margin-left: 15px; }
+
+/*-----------------------------------------------------------------------*/
+/* company */
+div#cmp_links { text-align: right; }
+div#cmp_links a {margin-left: 15px; }
+
+
+/*-----------------------------------------------------------------------*/
+/* new app */
+img#new_company { position: absolute; top: 15px; right: 30px;}
+div#check_results { margin: 10px 0 0 30px; }
+
+label#limited_cmp { margin-left: 95px; }
+label#proprietorship, label#individual { margin-left: 30px; }
+label#cmp_name { margin-right: 21px; }
+label#tin { margin-left: 10px; }
+label#dir_name { margin-right: 30px; }
+label#holder { margin-left: 55px; }
+p#other_shareholders { margin-left: 327px; }
+p#other_shareholders select { margin: 2px 0; }
+table#app_form_location { margin-bottom: 5px; }
+table#app_form_location td { padding: 0; margin: 0; }
+table#app_form_location td#region { width: 250px; }
+table#app_form_location td#district { width: 229px; }
+label#fax, label#email { margin-left: 25px; }
+div.categories1 p { margin-bottom: 5px; }
+label#street { margin-right: 13px; }
+label#box { margin-left: 10px; }
+label#block { margin-right: 18px; }
+label#plot { margin-left: 56px; }
+label#house { margin-left: 20px; }
+label#app_date { margin-right: 106px; }
+label.sub_cat { margin-right: 26px; }
+p.sub_cat { margin-top: 4px; }
+input#licence_application_subsidiary { margin: 0 45px; }
+span#update_categories { position: absolute; top: 20px; right: 20px; }
+
+label#cert_inc_or_reg { margin-right: 2px; }
+label#memorandum { margin-left: 100px; }
+label#att_powers { margin: 0 117px 0 100px; }
+label#premises { margin-right: 95px; }
+label#tin_cert { margin: 0 144px 0 100px; }
+label#cal { margin-right: 73px; }
+label#tal { margin: 0 58px 0 100px; }
+label#prof_cert { margin-right: 108px; }
+label#air_sea_worth { margin: 0 57px 0 100px; }
+span.comma_note { font-size: 10px; }
+
+div#new_app_submit4 { margin-top: 10px; position: relative; }
+div#new_app_submit1 { text-align: right; color: #dee; position: relative; }
+input#reset_new_app_bt { position: absolute; top: 7px; right: 40px; }
+input#submit_new_app_bt { position: absolute; top: 7px; right: 640px; }
+span#load_new_app { position: absolute; top: 7px; right: 620px; }
+
+
+/*-----------------------------------------------------------------------*/
+/* index and search */
+p.search_forms { margin-bottom: 3px; }
+select#search_lic_or_app1 { margin-right: 8px; }
+p#search_sec6, p#search_sec7, p#search_sec8, p.sec9, p#search_sec19, p#search_sec31 { padding: 3px 0 0 40px; }
+input#reset_search_bt { position: absolute; top: 20px; right: 20px; }
+div#report_link { text-align: right; }
+table#applications2 { width: 700px; margin: 0 auto; }
+table#applications2 td.ref , table#applications2 th.ref { width: 9%; border-right: 1px solid #999; border-bottom: 1px solid #999;}
+table#applications2 td.date, table#applications2 th.date { width: 8%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications2 td.line, table#applications2 th.line { width: 40%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications2 td.company, table#applications2 th.company { width: 30%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications2 td.investment, table#applications2 th.investment { width: 13%; border-bottom: 1px solid #999; }
+div.search_result { padding: 15px 5px; border-bottom: 1px solid #999}
+div#search_menu a { margin-left: 20px; }
+div#search_menu { margin-bottom: 15px; }
+table#applications3  { width: 715px; margin: 0 auto; }
+table#applications3 td.date, table#applications3 th.date { width: 8%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications3 td.line, table#applications3 th.line { width: 35%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications3 td.company, table#applications3 th.company { width: 28%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications3 td.investment, table#applications3 th.investment { width: 10%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications3 td.location, table#applications3 th.location { width: 19%; border-bottom: 1px solid #999; }
+
+
+/*-----------------------------------------------------------------------*/
+/* applications */
+table.mitm { border-collapse: collapse; table-layout: fixed; }
+table#applications { width: 680px; margin: 0 auto; }
+table.mitm th { font-style: bold; color: #0080c0; }
+table.mitm th, table.mitm td { text-align: left; padding-left: 5px; }
+table.mitm td a { color: blue; text-decoration: underline; }
+table.mitm td a:hover { color: #666; text-decoration: none; }
+table#applications td.ref , table#applications th.ref { width: 10%; border-right: 1px solid #999; border-bottom: 1px solid #999;}
+table#applications td.date, table#applications th.date { width: 10%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications td.line, table#applications th.line { width: 40%; border-right: 1px solid #999; border-bottom: 1px solid #999; }
+table#applications td.company, table#applications th.company { width: 40%; border-bottom: 1px solid #999; }
+div.list_links { padding: 10px 0 0 10px; }
+div.list_links a { color: blue; text-decoration: underline; }
+div.list_links a:hover { color: #666; text-decoration: none; }
+
+
+/*-----------------------------------------------------------------------*/
+/* application */
+div#perm_licence { margin: 3px 0 10px 0; }
+div.line { text-align: center; margin-bottom: 10px; }
+p#reset_licence_issue_bt { text-align: right; }
+span#edit_app_bt { position: absolute; top: 10px; right: 40px; }
+h3.app { margin-top: 10px; }
+p.app_element { 
+	background: url(../images/bullet.gif) left center no-repeat;
+	padding-left: 10px;
+	margin-left: 20px; }
+label.app_title, span.app_title { color: blue; }
+table.app { table-layout: fixed;}
+table#app_sec1, table#app_sec2, table#app_sec3 { width: 675px; margin: 0; padding: 0;}
+table#app_sec5, table#temp_licence_table, table#perm_licence_table, table#prn_licence { width: 450px; }
+table#temp_licence_table td, table#perm_licence_table td, table#prn_licence td { margin: 0; padding: 0; }
+input#cancel_edit_bt { position: absolute; top: 7px; right: 40px; }
+span#app_report_bt { padding-left: 50px; }
+span#app_delete_bt { padding-left: 15px; }
+span#cancel_bt { position: absolute; top: 7px; right: 40px; }
+
+/*-----------------------------------------------------------------------*/
+/* pending licences */
+span.over_due, span.today, span.almost_due { color: red }
+
+/*-----------------------------------------------------------------------*/
+/* trends */
+table#trends { width: 680px; margin: 5px auto 0 auto; }
+table#trends td.cat_name , table#trends th.cat_name { width: 85%; border-right: 1px solid #999; border-bottom: 1px solid #999;}
+table#trends td.licences, table#trends th.licences { width: 15%; border-bottom: 1px solid #999; }
+table#trends td#total { font-weight: bold; }
+table#trends td.licences { text-align: center; }
+table#trends tr#total { border-top: 1px solid #999; }
+div#result_img { text-align: center; }
+p#trend_sec2, p#trend_sec3, p#trend_sec4 { padding-left: 55px; }
+select#search_region, select#search_district { margin-right: 10px; }
+div#trends_menu a { margin-left: 20px; }
+div#trends_menu { margin-bottom: 15px; }

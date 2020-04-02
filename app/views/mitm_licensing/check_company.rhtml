@@ -1,0 +1,17 @@
+<div id="errors" style="display: none;"></div>
+<div id="warnings" style="display: none;"></div>
+
+<div class="category_header4"><div class="category_header3">
+<div class="category_header2"><div class="category_header1">
+<h2 class="title" id="new_application">Company Check</h2>
+<%= link_to(image_tag("new_company.gif", :id => "new_company"), :action => "new_application") %>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+  <label class="cat_label">Company name: </label><%= text_field 'company', 'name', :size => 65 %> 
+  <%= image_tag("loading.gif", :id => "check_indicator", :style => "display:none") %> 
+  <%= observe_field(:company_name, :url => {:action => :check_company}, :with => "name", :frequency => 0.5, :update => :check_results, 
+                                  :loading => "Element.show('check_indicator')", :complete => "Element.hide('check_indicator')") %>
+  
+  <div id="check_results"></div>
+</div></div></div></div>

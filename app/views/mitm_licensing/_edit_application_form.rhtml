@@ -1,0 +1,198 @@
+<% if @section == 1 -%>
+
+<div class="categories4" id="blah"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>1. About the Company or Applicant</h3>
+<p>Application for: <label id="limited_cmp">Limited Company</label> <%= radio_button 'company', 'business_type', "ltd" %> 
+<label id="proprietorship">Proprietorship</label> <%= radio_button 'company', 'business_type', "cmp" %> 
+<label id="individual">Individual</label> <%= radio_button 'company', 'business_type', "ind" %></p>
+<p>Certificate of Incorporation No.: <%= text_field 'company', 'inc_no', :size => 15 %> or 
+Registration No.: <%= text_field 'company', 'reg_no', :size => 15 %></p>
+
+<p><label id="cmp_name">Name of Applicant/Company: </label><%= text_field 'company', 'name', :size => 65 %>
+<label id="tin">TIN: </label><%= text_field 'tin', 'tin_number', :size => 15 %></p>
+<p><label id="dir_name">Manager's/Director's Name: </label><%= text_field 'director', 'names', :size => 65 %> <span class="comma_note">(use & for separation)</span></p>
+
+<p>Shareholders: <%= select 'company', 'no_of_shareholders', [1,2,3,4,5,6,7,8,9,10] %> 
+<label id="holder">Shareholder's Citizenship: </label><%= select 'company', 'holder1', [["country", "0"]] + Country.find(:all).collect {|cty| [cty.name, cty.id]} %>
+<span class="load_indicator" id="indicator_sec1" style="display: none;"><%= image_tag 'loading.gif' %></span></p>
+<p id="other_shareholders">
+<% for i in 1..@company.shareholders.size - 1 -%>
+    <% holder = "holder" + (i + 1).to_s %>
+    <%= select 'company', holder, [["country", "0"]] + Country.find(:all).collect {|cty| [cty.name, cty.id]} %>
+<% end -%>
+</p>
+<%= observe_field(:company_no_of_shareholders, :url => {:action => :other_shareholders}, :with => "num", 
+                              :loading => "new Element.show('indicator_sec1')", :complete => "new Element.hide('indicator_sec1')") %>
+</div></div></div></div>
+
+<% elsif @section == 2  || @section == 3-%>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>2. Address and Business Premises</h3>
+<table class="mitm" id="app_form_location"><tr><td id="region">
+<label class="ap_label">Location: </label>
+<span id="select_region"><%= select 'address', 'region', [[@address.region.name, @address.region.id]] + 
+      Region.find(:all, :conditions => ["id != ?", @address.region.id]).collect {|reg| [reg.name, reg.id]} %>
+<%= observe_field(:address_region, :url => {:action => :setup_districts}, :with => "reg_id", 
+                              :loading => "new Element.show('indicator_sec2')", :complete => "new Element.hide('indicator_sec2')") %></span> 
+<span class="load_indicator" id="indicator_sec2" style="display: none;" ><%= image_tag 'loading.gif' %></span></td>
+
+<td id="district"><span id="select_district"><label> District: </label><%= select 'address', 'district', [[@address.district.name, @address.district.id]] + 
+District.find(:all, :conditions => ["id != ? and region_id = ?", @address.district.id, @address.region.id]).collect {|dst| [dst.name, dst.id]} %>
+</span><%= image_tag('loading.gif', :id => "indicator_sec2_2", :style => "display: none;") %>
+<%= observe_field(:address_district, :url => {:action => :setup_wards}, :with => "dis_id", 
+                              :loading => "new Element.show('indicator_sec2'_2)", :complete => "new Element.hide('indicator_sec2'_2)") %></td>
+                              
+<td id="ward"><span id="select_ward"><label>Ward: </label><%= select 'address', 'ward_id', [[@address.ward.name, @address.ward.id]] + 
+Ward.find(:all, :conditions => ["id != ? and district_id = ?", @address.ward.id, @address.district.id]).collect {|wrd| [wrd.name, wrd.id]} %>
+</span></td></tr></table>
+
+<p><label id="street">Street: </label><%= text_field 'address', 'street', :size => 29 %>
+<label id="box">P.O Box: </label><%= text_field 'address', 'box', :size => 22 %></p>
+<p><label id="block">Block: </label><%= text_field 'address', 'block', :size => 22 %>
+<label id="plot">Plot #: </label><%= text_field 'address', 'plot_no', :size => 22 %>
+<label id="house">House #: </label><%= text_field 'address', 'house_no', :size => 22 %></p>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>3. Communication</h3>
+<table><tr>
+<td><label id="phone">Tel: </label><%= text_field 'address', 'phone', :size => 30 %></td>
+<td><label id="fax">Fax: </label><%= text_field 'address', 'fax_no', :size => 30 %></td>
+<td><label id="email">Email: </label><%= text_field 'address', 'email', :size => 30 %></td></tr></table>
+</div></div></div></div>
+
+<% elsif @section == 4 -%>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>4. Line of Business</h3>
+<p><label class="ap_label">Business Category: </label>
+<%= select 'licence_application', 'main_category', [["main category", "0"]] + Category.find(:all, :conditions => ["parent_id = ?", @root.id]).collect {|cat| [cat.name, cat.id]} %> 
+<%= image_tag('loading.gif', :id => "indicator_sec4", :style => "display: none") %>
+<%= observe_field(:licence_application_main_category, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+    :loading => "new Element.show('indicator_sec4')", :complete => "new Element.hide('indicator_sec4')") %></p>
+
+<p id="sub_category1">
+<% if !@licence_application.sub_category1.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category1', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.main_category]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading1", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category1, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading1')", :complete => "new Element.hide('sub_cat_loading1')") %>
+<% end -%></p>
+
+<p id="sub_category2">
+<% if !@licence_application.sub_category2.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category2', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category1]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading2", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category2, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading2')", :complete => "new Element.hide('sub_cat_loading2')") %>
+<% end -%></p>
+
+<p id="sub_category3">
+<% if !@licence_application.sub_category3.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category3', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category2]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading3", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category3, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading3')", :complete => "new Element.hide('sub_cat_loading3')") %>
+<% end -%></p>
+
+<p id="sub_category4">
+<% if !@licence_application.sub_category4.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category4', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category3]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading4", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category4, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading4')", :complete => "new Element.hide('sub_cat_loading4')") %>
+<% end -%></p>
+
+<p id="sub_category5">
+<% if !@licence_application.sub_category5.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category5', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category4]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading5", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category5, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading5')", :complete => "new Element.hide('sub_cat_loading5')") %>
+<% end -%></p>
+
+<p id="sub_category6">
+<% if !@licence_application.sub_category6.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category6', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category5]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading6", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category6, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading6')", :complete => "new Element.hide('sub_cat_loading6')") %>
+<% end -%></p>
+
+<p id="sub_category7">
+<% if !@licence_application.sub_category7.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category7', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category6]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading7", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category7, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading7')", :complete => "new Element.hide('sub_cat_loading7')") %>
+<% end -%></p>
+
+<p id="sub_category8">
+<% if !@licence_application.sub_category8.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category8', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category7]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading8", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category8, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading8')", :complete => "new Element.hide('sub_cat_loading8')") %>
+<% end -%></p>
+
+<p id="sub_category9">
+<% if !@licence_application.sub_category9.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category9', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category8]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading9", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category9, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading9')", :complete => "new Element.hide('sub_cat_loading9')") %>
+<% end -%></p>
+
+<p id="sub_category10">
+<% if !@licence_application.sub_category10.nil? -%>
+  <label class="sub_cat">Sub-Category: </label>
+  <%= select 'licence_application', 'sub_category10', Category.find(:all, :conditions => ["parent_id = ?", @licence_application.sub_category9]).collect {|cat| [cat.name, cat.id]} %> 
+  <%= image_tag('loading.gif', :id => "sub_cat_loading10", :style => "display:none") %>
+  <%= observe_field(:licence_application_sub_category10, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+                              :loading => "new Element.show('sub_cat_loading10')", :complete => "new Element.hide('sub_cat_loading10')") %>
+<% end -%></p>
+</div></div></div></div>
+
+<% elsif @section == 5 -%>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>5. Certification</h3>
+<p>Date of Application: <span id="select_year">
+<%= select_year @licence_application.app_date.year, :start_year => 1990, :end_year => 2010 %> </span>
+<%= select_month @licence_application.app_date.month %> 
+<%= select_day @licence_application.app_date.day %></p>
+<p><label>Signed by Applicant/Company Director </label><%= check_box 'licence_application', 'signed' %></p>
+</div></div></div></div>
+
+<% elsif @section == 6 -%>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>6. Accompanying Documentation</h3>
+<p><label id="cert_inc_or_reg">Certificate of Incorporation or Registration </label><%= check_box 'attachment', 'cert_inc_or_reg' %>
+<label id="memorandum">Memorandum and Articles of Association </label><%= check_box 'attachment', 'memorandum' %></p>
+<p><label>Proof of Tanzanian Citizenship or Residency </label><%= check_box 'attachment', 'tz_proof' %>
+<label id="att_powers">Powers of Attorney </label><%= check_box 'attachment', 'att_powers' %></p>
+<p><label id="premises">Proof of Business Premises </label><%= check_box 'attachment', 'premises' %>
+<label id="tin_cert">TIN Certificate </label><%= check_box 'attachment', 'tin_cert' %></p>
+
+<h3>Specific Requirements</h3>
+<p><label id="cal">Customs Agency Licence (CAL) </label><%= check_box 'attachment', 'cal' %>
+<label id="tal">Tourism Agency Licence (TAL) </label><%= check_box 'attachment', 'tal' %></p>
+<p><label id="prof_cert">Professional Certificates </label><%= check_box 'attachment', 'prof_cert' %>
+<label id="air_sea_worth">Air/Sea Worthiness Certificate </label><%= check_box 'attachment', 'air_sea_worth' %></p>
+
+<h3>Other</h3>
+<p><%= text_field 'attachment', 'other', :size => 100 %> <span class="comma_note">(use & for separation)</span></p>
+</div></div></div></div>
+
+<% end -%>

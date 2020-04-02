@@ -1,0 +1,6 @@
+page['errors'].hide
+page['category_list'].replace_html :partial => "categories"
+page['select_parent'].replace_html :partial => "select_parent_including_main"
+page['select_category'].replace_html :partial => "select_categories"
+page['category_count'].replace_html :partial => "category_count"
+page.select('form').each {|f| f.reset}

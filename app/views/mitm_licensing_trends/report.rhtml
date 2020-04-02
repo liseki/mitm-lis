@@ -1,0 +1,22 @@
+<div class="mitm_report">
+<div id="report_stamp"><%= link_to("mitm", :action => "index") %> 
+report generated on <%= time_date_2(Time.now) %> at <%= time_date_4(Time.now) %></div>
+
+<h3><%if @option == 1-%><%= trend_title %><%elsif @option == 2-%><%= trend_title2 %><%end-%></h3>
+
+<% if @graph_option == 5 -%><%= image_tag session[:graph1] %><% end -%>
+
+
+<table id="trends" class="mitm">
+<tr><th class="cat_name">sector</th><th class="licences">licences issued</th></tr>
+<% for i in 1..@category_distribution.size - 1 -%>
+      <% if @category_distribution[i] != 0 -%>
+            <tr><td class="cat_name"><%=h Category.find(i).name %></td>
+            <td class="licences"><%=h @category_distribution[i] %></td></tr>
+      <% end -%>
+<% end -%>      
+
+    <tr><td class="cat_name" id="total">TOTAL</td>
+    <td class="licences"><%=h @category_distribution[0] || 0 %></td></tr>
+</table>
+</div>

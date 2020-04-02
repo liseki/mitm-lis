@@ -1,0 +1,156 @@
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="index">Business Licence Application ref #<%= @application.ref %> 
+<span id="app_report_bt"><%= link_to(image_tag('report.gif'), :action => "application_report", :id => @application) %></span>
+<% if !@application.processed && session[:mitm_user_type].to_i >= 0-%>
+<span id="app_delete_bt"><%= link_to(image_tag('delete_app.gif'), {:action => "delete_application", :id => @application}, 
+																	{:confirm => "Are you sure you to delete this application?"}) %></span>
+<% end -%>
+</h2>
+</div></div></div></div>
+
+<div id="errors" style="display:none"></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<div id="prn_licence">
+<% if @application.subsidiary -%>
+<table class="app" id="prn_licence"><tr>
+<td><p class="app_element"><span class="app_title">Subsidiary of: </span><%= link_to @principle.name, :action => "company", :id => @principle%> </p></td>
+</tr></table>
+<% end -%>
+</div>
+
+<div id="temp_licence">
+<% if !@application.processed && session[:mitm_user_type].to_i >= 0-%>
+	<% form_remote_tag :url => {:action => "issue_temp_licence", :app_id => @application.id}, 
+			:loading => "new Element.show('temp_indicator')", :complete => "new Element.hide('temp_indicator')" do -%>
+	<label class="app_title">#: </label><%= text_field 'licence', 'temp_number', :size => 15 %> 
+  <label class="app_title">confirm #: </label><%= text_field 'licence', 'temp_number_confirmation', :size => 15 %> 
+  <label class="app_title">Date: </label> 
+	<%= select_year Date.today.year, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR, :prefix => "temp" %> 
+	<%= select_month Date.today.month, :prefix => "temp" %> <%= select_day Date.today.day, :prefix => "temp" %> 
+	<%= image_submit_tag 'temp_licence.gif', {:id => "temp_licence_bt"} %> 
+	<span id="temp_indicator" style="display: none;"><%= image_tag 'loading.gif' %></span>
+	<% end -%>
+
+<% elsif @application.processed && !@application.licence.temp_number.nil? -%>
+	<table class="app" id="temp_licence_table"><tr>
+	<td><p class="app_element"><span class="app_title">Temporary Licence #: </span><%=h @application.licence.temp_number %> </p></td>
+	<td><p class="app_element"><span class="app_title">Issued: </span><%=h time_date_2(@application.licence.temp_issue_date) %> 
+    <% if session[:mitm_user_type].to_i == 1 -%>
+      <%= link_to(image_tag('edit.gif'), :action => "edit_temp_licence", :id => @application) %>
+    <% end -%></p>
+  </td>
+	</tr></table>
+  
+<% else -%>
+  <table class="app" id="temp_licence"><tr><td><p class="app_element">No temporary licence issued.</p></td></tr></table>
+<% end -%>
+</div>
+
+<div id="perm_licence">
+<% if !@application.processed && session[:mitm_user_type].to_i >= 0 || @application.processed && @application.licence.licence_type == "t" && session[:mitm_user_type].to_i >= 0-%>
+	<% form_remote_tag :url => {:action => "issue_perm_licence",  :app_id => @application.id}, :loading => "new Element.show('perm_indicator')", 
+										:complete => "new Element.hide('perm_indicator')" do -%>
+	<label class="app_title">#: </label><%= text_field 'licence', 'perm_number', :size => 15 %> 
+  <label class="app_title">confirm #: </label><%= text_field 'licence', 'perm_number_confirmation', :size => 15 %>
+  <label class="app_title">Date: </label> 
+	<%= select_year Date.today.year, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR, :prefix => "perm" %> 
+	<%= select_month Date.today.month, :prefix => "perm" %> <%= select_day Date.today.day, :prefix => "perm" %> 
+	<%= image_submit_tag 'perm_licence.gif', {:id => "perm_licence_bt"} %>
+	<span id="perm_indicator" style="display: none"><%= image_tag 'loading.gif' %></span>
+<% end -%>
+
+<p id="reset_licence_issue_bt"><%= link_to_remote(image_tag('reset.gif'), :url => {:action => "reset_licence_issue"}) %></p>
+
+<% elsif @application.processed && @application.licence.licence_type == "p" -%>
+	<table class="app" id="perm_licence_table"><tr>
+	<td><p class="app_element"><span class="app_title">Permanent Licence #: </span><%=h @application.licence.perm_number %> </p></td>
+	<td><p class="app_element"><span class="app_title">Issued: </span><%=h time_date_2(@application.licence.perm_issue_date) %> 
+    <% if session[:mitm_user_type].to_i == 1 -%>
+      <%= link_to(image_tag('edit.gif'), :action => "edit_perm_licence", :id => @application) %>
+    <% end -%></p>
+  </td>
+	</tr></table>
+  
+<% else -%>
+  <table class="app" id="temp_licence"><tr><td><p class="app_element">No permanent licence issued.</p></td></tr></table>
+<% end -%>
+</div>
+
+
+<h3>1. Applicant 
+<span id="edit1">
+<% if @application.company.got_perm_licences == 0 && session[:mitm_user_type].to_i >= 0-%>
+<%= link_to(image_tag('edit.gif'), {:action => "edit_application", :id => @application, :sec => 1}) %><% end -%></span></h3>
+<table class="app" id="app_sec1"><tr>
+<td><p class="app_element"><span class="app_title">Type: </span><%=h @application.company.business %></p></td>
+<td><% if @application.company.business_type != "ind" -%>
+<p class="app_element"><span class="app_title"><% if @application.company.business_type == "ltd" -%>Certificate of Inc #<% else %> Registration #<% end -%>: </span><%=h @application.company.inc_or_reg_no %></p>
+<% end -%></td>
+<td><p class="app_element"><span class="app_title">TIN: </span><%=h @application.company.tin.ti_num %></p></td></tr></table>
+<table class="app"><tr>
+<td><p class="app_element"><span class="app_title">Investment: </span><%=h @application.company.investment %> (<%= show_shareholders %>)</p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Name: </span><%=link_to @application.company.name, :action => "company", :id => @application.company %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Director: </span><%=h @application.company.show_directors %></p></td></tr>
+</table>
+
+<h3 class="app">2. Address and Business Premises 
+<span id="edit2">
+<% if @application.company.got_perm_licences == 0 && session[:mitm_user_type].to_i >= 0-%>
+<%= link_to(image_tag('edit.gif'), {:action => "edit_application", :id => @application, :sec => 2}) %><% end -%></span></h3>
+<table class="app" id="app_sec2"><tr>
+<td><p class="app_element"><span class="app_title">Ward: </span><%=h @application.company.address.ward.name %></p></td>
+<td><p class="app_element"><span class="app_title">District: </span><%=h @application.company.address.ward.district.name %></p></td>
+<td><p class="app_element"><span class="app_title">Region: </span><%=h @application.company.address.ward.district.region.name %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">P.O.Box: </span><%=h @application.company.address.p_o_box %></p></td>
+<td><p class="app_element"><span class="app_title">Street: </span><%=h @application.company.address.street %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Block: </span><%=h @application.company.address.block %></p></td>
+<td><p class="app_element"><span class="app_title">Plot #: </span><%=h @application.company.address.plot_no %></p></td>
+<td><p class="app_element"><span class="app_title">House #: </span><%=h @application.company.address.house_no %></p></td>
+</tr></table>
+
+<h3 class="app">3. Communication 
+<span id="edit3">
+<% if @application.company.got_perm_licences == 0 && session[:mitm_user_type].to_i >= 0-%>
+<%= link_to(image_tag('edit.gif'), {:action => "edit_application", :id => @application, :sec => 3}) %><% end -%></span></h3>
+<table class="app" id="app_sec3"><tr>
+<td><p class="app_element"><span class="app_title">Telephone: </span><%=h @application.company.address.telephone %></p></td>
+<td><p class="app_element"><span class="app_title">Fax: </span><%=h @application.company.address.fax %></p></td>
+<td><p class="app_element"><span class="app_title">Email: </span><%=h @application.company.address.email %></p></td>
+</tr></table>
+
+<h3 class="app">4. Line of Business 
+<span id="edit4">
+<%if @application.company.got_perm_licences == 0 && session[:mitm_user_type].to_i >= 0-%>
+<%= link_to(image_tag('edit.gif'), {:action => "edit_application", :id => @application, :sec => 4}) %><% end -%></span></h3>
+<table class="app" id="app_sec4"><tr>
+<td><p class="app_element"><%=h @application.category.name %></p></td>
+</tr></table>
+
+<h3 class="app">5. Certification 
+<span id="edit5">
+<% if @application.company.got_perm_licences == 0 && session[:mitm_user_type].to_i >= 0-%>
+<%= link_to(image_tag('edit.gif'), {:action => "edit_application", :id => @application, :sec => 5}) %><% end -%></span></h3>
+<table class="app" id="app_sec5"><tr>
+<td><p class="app_element"><span class="app_title">Date: </span><%=h time_date_2(@application.app_date) %></p></td>
+<td><p class="app_element"><span class="app_title">Signed: </span><%=h @application.signature %></p></td>
+</tr></table>
+
+<h3 class="app">6. Accompanying Documentation 
+<span id="edit6">
+<% if @application.company.got_perm_licences == 0 && session[:mitm_user_type].to_i >= 0-%>
+<%= link_to(image_tag('edit.gif'), {:action => "edit_application", :id => @application, :sec => 6}) %><% end -%></span></h3>
+<table class="app" id="app_sec6">
+<% if @application.attachment.cert_inc_or_reg -%><tr><td><p class="app_element">Certificate of Incorporation or Registration</p></td></tr><% end -%>
+<% if @application.attachment.memorandum -%><tr><td><p class="app_element">Memorandum and Articles of Association</p></td></tr><% end -%>
+<% if @application.attachment.tz_proof -%><tr><td><p class="app_element">Proof of Tanzanian Citizenship or Residency</p></td></tr><% end -%>
+<% if @application.attachment.att_powers -%><tr><td><p class="app_element">Powers of Attorney</p></td></tr><% end -%>
+<% if @application.attachment.premises -%><tr><td><p class="app_element">Proof of Business Premises</p></td></tr><% end -%>
+<% if @application.attachment.tin_cert -%><tr><td><p class="app_element">TIN Certificate</p></td></tr><% end -%>
+<% if @application.attachment.cal -%><tr><td><p class="app_element">Customs Agency Licence (CAL)</p></td></tr><% end -%>
+<% if @application.attachment.tal -%><tr><td><p class="app_element">Tourism Agency Licence (TAL)</p></td></tr><% end -%>
+<% if @application.attachment.prof_cert -%><tr><td><p class="app_element">Professional Certificates</p></td></tr><% end -%>
+<% if @application.attachment.air_sea_worth -%><tr><td><p class="app_element">Air/Sea Worthiness Certificate</p></td></tr><% end -%>
+<% if @application.attachment.other != "" -%><tr><td><p class="app_element"><span class="app_title">Other: </span><%= @application.attachment.other %></p></td></tr><% end -%>
+</table>
+</div></div></div></div>

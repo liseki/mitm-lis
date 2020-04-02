@@ -1,0 +1,3122 @@
+r Arusha
+
+d Arumeru
+w Akheri
+w Bangata
+w Bwawani
+w Ilkiding'a
+w Kikati
+w Kikwe
+w Kimnyaki
+w King'ori
+w Kiranyi
+w Kisongo
+w Leguruki
+w Makiba
+w Maji ya Chai
+w Maroroni
+w Mateves
+w Mbuguni
+w Mlangarini
+w Moivo
+w Moshono
+w Murieti
+w Musa
+w Mwandeti
+w Nduruma
+w Ngarenanyuki
+w Nkoanrua
+w Nkoaranga
+w Nkoarisambu
+w Oldonyosambu
+w Oljoro
+w Olkokola
+w Oltroto
+w Oltrumet
+w Poli
+w Singisi
+w Sokoni II
+w Songoro
+w Usa River
+
+d Arusha
+w Baraa
+w Elerai
+w Engutoto
+w Daraja Mbili
+w Kaloleni
+w Kati
+w Kimandolu
+w Lemara
+w Levolosi
+w Oloirien
+w Ngarenaro
+w Sekei
+w Sokoni
+w Sombetini
+w Themi
+w Unga L.T.D.
+
+d Karatu
+w Baray
+w Buger
+w Daa
+w Endabash
+w Endamarariek
+w Kansay
+w Karatu
+w Mang'ola
+w Mbulumbuli
+w Oldeani
+w Qurus
+w Rhotia
+
+d Monduli
+w Engarenaibor
+w Engaruka
+w Engutoto
+w Esilalei
+w Gelai Lumbwa
+w Gelai Meirugoi
+w Kitumbeine
+w Lolkisale
+w Longido
+w Makuyuni
+w Matale
+w Moita
+w Monduli Juu
+w Monduli Mjini
+w Mto wa Mbu
+w Namanga
+w Ol-molog
+w Selela
+w Sepeko
+w Tingatinga
+
+d Ngorongoro
+w Arash
+w Digodigo
+w Enduleni
+w Kakesio
+w Malambo
+w Nainokanoka
+w Nayobi
+w Olbalbal
+w Oldonyo-Sambu
+w Orgosorok
+w Ngorongoro
+w Pinyinyi
+w Sale
+w Soit Sambu
+
+###############################################
+
+r Dar es Salaam
+
+d Ilala
+w Buguruni
+w Chanika
+w Gerezani
+w Ilala
+w Jangwani
+w Kariakoo
+w Kinyerezi
+w Kipawa
+w Kitunda
+w Kisutu
+w Kivukoni
+w Kiwalani
+w Mchafukoge
+w Mchikichini
+w Msongola
+w Pugu
+w Segerea
+w Tabata
+w Ukonga
+w Upanga East
+w Upanga West
+w Vingunguti
+
+d Kinondoni
+w Bunju
+w Goba
+w Hanna Nassif
+w Kawe
+w Kibamba
+w Kigogo
+w Kijitonyama
+w Kimara
+w Kinondoni
+w Kunduchi
+w Mabibo
+w Magomeni
+w Makuburi
+w Makumbusho
+w Makurumula
+w Manzese
+w Mbezi
+w Mburahati
+w Mbweni
+w Mikocheni
+w Msasani
+w Mwananyamala
+w Mzimuni
+w Ndugumbi
+w Sinza
+w Tandale
+w Ubungo
+
+d Temeke
+w Azimio
+w Chamazi
+w Chang'ombe
+w Charambe
+w Keko
+w Kigamboni
+w Kibada
+w Kimbiji
+w Kisarawe
+w Kurasini
+w Makangarawe
+w Mbagala
+w Miburani
+w Mjimwema
+w Mtoni
+w Pemba Mnazi
+w Sandali
+w Somangira
+w Tandika
+w Temeke
+w Toangoma
+w Vijibweni
+w Yombo Vituka
+
+###############################################
+
+r Dodoma
+
+d Dodoma Rural
+w Babayu
+w Bahi
+w Buigiri
+w Chali
+w Chibelela
+w Chikola
+w Chilonwa
+w Chinugulu
+w Chipanga
+w Dabalo
+w Fufu
+w Handuli
+w Haneti
+w Huzi
+w Ibihwa
+w Ibugule
+w Idifu
+w Igandu
+w Ikowa
+w Ilindi
+w Iringa Mvumi
+w Itiso
+w Kigwe
+w Lamati
+w Majeleko
+w Makanda
+w Makang'wa
+w Manchali
+w Manda
+w Manzase
+w Membe
+w Mlola Bwawani
+w Mpalanga
+w Mpamantwa
+w Mpwayungu
+w Msamalo
+w Msanga
+w Msisi
+w Mtitaa
+w Mundemu
+w Muungano
+w Mvumi Makulu
+w Mvumi Mission
+w Mwitikila
+w Nghambaku
+w Nondwa
+w Segala
+w Zanka
+
+d Dodoma Urban
+w Chamwino
+w Chihanga
+w Dodoma Makulu
+w Hazina
+w Hombolo
+w Ipala
+w Kikombo
+w Kikuyu North
+w Kikuyu South
+w Kilimani
+w Kiwanja cha Ndege
+w Kizota
+w Madukani
+w Majengo
+w Makole
+w Makutupora
+w Mbabala
+w Mbalawala
+w Miyuji
+w Mkonze
+w Mpunguzi
+w Msalato
+w Mtumba
+w Nala
+w Ng'ong'ona
+w Nzuguni
+w Tambukareli
+w Uhuru
+w Viwandani
+w Zuzu
+
+d Kondoa
+w Bereko
+w Bumbuta
+w Busi
+w Chandama
+w Changaa
+w Chemba
+w Dalai
+w Farkwa
+w Goima
+w Gwandi
+w Haubi
+w Jangalo
+w Kalamba
+w Kikilo
+w Kikore
+w Kingale
+w Kisese
+w Kolo
+w Kondoa Mjini
+w Kwadelo
+w Kwamtoro
+w Lalta
+w Makorongo
+w Masange
+w Mnenia
+w Mondo
+w Mpendo
+w Mrijo
+w Ovada
+w Pahi
+w Paranga
+w Sanzawa
+w Soera
+w Suruke
+w Thawi
+
+d Kongwa
+w Chamkoroma
+w Hogoro
+w Iduo
+w Kibaigwa
+w Kongwa
+w Mkoka
+w Mlali
+w Mtanana
+w Njoge
+w Pandambili
+w Sagara
+w Sejeli
+w Ugogoni
+w Zoissa
+
+d Mpwapwa
+w Berege
+w Chunyu
+w Gode Gode
+w Ipera
+w Kibakwe
+w Kimagai
+w Luhundwa
+w Lumuma
+w Massa
+w Matamondo
+w Mazae
+w Mbuga
+w Mima
+w Mlunduzi
+w Mpwapwa Mjini
+w Rudi
+w Ving'hawe
+w Wotta
+
+###############################################
+
+r Iringa
+
+d Iringa Rural
+w Idodi
+w Ifunda
+w Ilolompya
+w Itunundu
+w Izazi
+w Kalenga
+w Kihorogota
+w Kiwere
+w Lumuli
+w Maboga
+w Mahuninga
+w Magulilwa
+w Malengamakali
+w Mgama
+w Mlowa
+w Mseke
+w Nduli
+w Nzihi
+w Ulanda
+w Wasa
+
+d Iringa Urban
+w Gangilonga
+w Ilala
+w Kihesa
+w Kitanzini
+w Kitwiru
+w Kwakilosa
+w Makorongoni
+w Mivinjeni
+w Mkwawa
+w Mlandege
+w Mshindo
+w Mtwivila
+w Mwangata
+w Ruaha
+
+d Ludewa
+w Ibumi
+w Iwela
+w Kilondo
+w Luana
+w Ludende
+w Ludewa
+w Lugarawa
+w Luilo
+w Lumbila
+w Lupanga
+w Lupingu
+w Madilu
+w Madope
+w Makonde
+w Manda
+w Masasi
+w Mavanga
+w Mawengi
+w Milo
+w Mkomang'ombe
+w Mundindi
+
+d Makete
+w Bulongwa
+w Ikuwo
+w Iniho
+w Ipelele
+w Ipepo
+w Iwawa
+w Kigulu
+w Kipagalo
+w Kitulo
+w Lupalilo
+w Lupila
+w Mang'oto
+w Matamba
+w Mbalatse
+w Mfumbi
+w Mlondwe
+w Ukwama
+
+d Mufindi
+w Bumilayinga
+w Idunda
+w Ifwagi
+w Igombavanu
+w Igowole
+w Ihalimba
+w Ihanu
+w Ihowanza
+w Ikweha
+w Isalavanu
+w Itandula
+w Kasanga
+w Kibengu
+w Kiyowela
+w Luhunga
+w Mafinga
+w Makungu
+w Malangali
+w Mapanda
+w Mbalamaziwa
+w Mdabulo
+w Mninga
+w Mpanga TAZARA
+w Mtambula
+w Mtwango
+w Nyololo
+w Rungemba
+w Sadani
+
+d Njombe
+w Idamba
+w Igongolo
+w Igosi
+w Ikondo
+w Ikuka
+w Ilembula
+w Imalinyi
+w Iwungilo
+w Kidegembye
+w Kifanya
+w Luduga
+w Lupembe
+w Luponde
+w Mahongole
+w Makambako
+w Matola
+w Mdandu
+w Mtwango
+w Njombe Mjini
+w Saja
+w Usuka
+w Uwemba
+w Wangama
+w Wanging'ombe
+w Yakobi
+
+###############################################
+
+r Kagera
+
+d Biharamulo
+w Biharamulo Mjini
+w Bukome
+w Buseresere
+w Buziku
+w Bwera
+w Chato
+w Ichwankima
+w Ilemela
+w Kachwamba
+w Kalenge
+w Katende
+w Kigongo
+w Lusahunga
+w Makurugusi
+w Muganza
+w Nyabusozi
+w Nyakahura
+w Nyamigomo
+w Nyamirembe
+w Nyarubungo
+w Runazi
+
+d Bukoba Rural
+w Bugandika
+w Bugorora
+w Buhendangabo
+w Bujugo
+w Buterankuzi
+w Buyango
+w Bwanjai
+w Nsunga
+w Minziro
+w Kasambya
+w Kyaka
+w Kilimilile
+w Kakunyu
+w Ruzinga
+w Kashenye
+w Kanyigo
+w Ishunju
+w Ishozi
+w Gera
+w Kitobo
+w Rubafu
+w Kishanje
+w Kaagya
+w Nyakato
+w Katoma
+w Karabagaine
+w Maruku
+w Kanyangereko
+w Kyamuraile
+w Katoro
+w Kaibanja
+w Nyakibimbili
+w Kasharu
+w Katerero
+w Ibwera
+w Mikoni
+w Ruhunga
+w Izimbya
+w Rubale
+w Kikomero
+w Kibirizi
+
+d Bukoba Urban
+w Hamugembe
+w Nshambya
+w Buhembe
+w Kahororo
+w Kashai
+w Miembeni
+w Bilele
+w Bakoba
+w Ijuganyondo
+w Kitendaguro
+w Kibeta
+w Kagondo
+w Nyanga
+w Rwamishenye
+
+d Karagwe
+w Bugene
+w Bugomora
+w Bweranyange
+w Igurwa
+w Ihanda
+w Ihembe
+w Isingiro
+w Kaisho
+w Kamuli
+w Kayanga
+w Kibingo
+w Kibondo
+w Kihanga
+w Kimuli
+w Kiruruma
+w Kituntu
+w Kyerwa
+w Mabira
+w Murongo
+w Ndama
+w Nkwenda
+w Nyabiyonza
+w Nyaishozi
+w Nyakahanga
+w Nyakakika
+w Nyakasimbi
+w Rugu
+w Rwabwere
+
+d Muleba
+w Biirabo
+w Buganguzi
+w Bulyakashaju
+w Bumbile
+w Burungura
+w Goziba
+w Ibuga
+w Ijumbi
+w Ikondo
+w Izigo
+w Kabirizi
+w Kagoma
+w Kamachumu
+w Karambi
+w Kasharunga
+w Kashasha
+w Kibanga
+w Kimwani
+w Kishanda
+w Kyebitembe
+w Magata Karutanga
+w Mazinga
+w Mubunda
+w Muhutwe
+w Muleba
+w Muyondwe
+w Ngenge
+w Nshamba
+w Ruhanga
+w Rushwa
+
+d Ngara
+w Bukiriro
+w Bugarama
+w Kabanga
+w Kanazi
+w Kibimba
+w Kirushya
+w Keza
+w Mabawe
+w Muganza
+w Mugoma
+w Murusagamba
+w Ngara Mjini
+w Ntobeye
+w Nyakisasa
+w Nyamiyaga
+w Rulenge
+w Rusumo
+
+###############################################
+
+r Kigoma
+
+d Kasulu
+w Buhigwe
+w Buhoro
+w Heru Ushingo
+w Janda
+w Kagera Nkanda
+w Kajana
+w Kasulu Mjini
+w Kigondo
+w Kilelema
+w Kitagata
+w Kitanga
+w Kwaga
+w Msambara
+w Muhinda
+w Muhunga
+w Munanila
+w Munyegera
+w Murufiti
+w Muyama
+w Muzenze
+w Muzye
+w Nyakitonto
+w Nyamidaho
+w Nyamnyusi
+w Nyamugali
+w Ruhita
+w  Rungwe Mpya
+w Rusaba
+w Rusesa
+w Titye
+
+d Kibondo
+w Bunyambo
+w Busagara
+w Gwanumpu
+w Itaba
+w Kakonko
+w Kasanda
+w Kasuga
+w Kibondo Mjini
+w Kitahana
+w Kizazi
+w Kumsenga
+w Mabamba
+w Misezero
+w Mugunzu
+w Muhange
+w Murungu
+w Nyabibuye
+w Nyamtukuza
+w Rugenge
+w Rugongwe
+
+d Kigoma Rural
+w Mkigo
+w Kalinzi
+w Bitale
+w Mahembe
+w Matendo
+w Uvinza
+w Mtego wa Noti
+w Nguruka
+w Mganza
+w Kalya
+w Buhingu
+w Igalula
+w Sigunga
+w Sunuka
+w Ilagala
+w Kandaga
+w Simbo
+w Mngonya
+w Mwandiga
+w Kagongo
+w Mwamgongo
+w Kagunga
+
+d Kigoma Urban
+w Gungu
+w Buhanda Businde
+w Kagera
+w Kasimbu
+w Rubuga
+w Machinjioni
+w Kasingirima
+w Kitongoni
+w Majengo
+w Rusimbi
+w Mwanga Kusini
+w Kigoma Bangwe
+w Mwanga Kaskazini
+
+###############################################
+
+r Kilimanjaro
+
+d Hai
+w Hai Mjini
+w Machame Kaskazini
+w Machame Kusini
+w Machame Magharibi
+w Machame Mashariki
+w Machame Uroki
+w Masama Kusini
+w Masama Magharibi
+w Masama Mashariki
+w Masama Rundugai
+w Siha Kaskazini
+w Siha Kati
+w Siha Magharibi
+w Siha Mashariki
+
+d Moshi Rural
+w Arusha Chini
+w Kahe
+w Kahe Mashariki
+w Kibosho Kati
+w Kibosho Magharibi
+w Kibosho Mashariki
+w Kilema Kaskazini
+w Kilema Kati
+w Kilema Kusini
+w Kimochi
+w Kindi
+w Kirima
+w Kirua Vunjo Kusini
+w Kirua Vunjo Magharibi
+w Kirua Vunjo Mashariki
+w Makuyuni
+w Mabogini
+w Mamba Kaskazini
+w Mamba Kusini
+w Marangu Magharibi
+w Marangu Mashariki
+w Mbokomu
+w Mwika Kaskazini
+w Mwika Kusini
+w Okoani Kibosho
+w Old Moshi East
+w Old Moshi West
+w Uru Kaskazini
+w Uru Mashariki
+w Uru Shimbwe
+w Uru South Mawela
+
+d Moshi Urban
+w Bondeni
+w Kaloleni
+w Karanga
+w Kiboriloni
+w Kilimanjaro
+w Kiusa
+w Korongoni
+w Longuo
+w Majengo
+w Mawenzi
+w Mji Mpya
+w Msaranga
+w Njoro
+w Rau
+w Pasua
+
+d Mwanga
+w Kileo
+w Mwanga
+w Msangeni 
+w Kifula
+w Kighare
+w Kirongwe
+w Kwakoa
+w Lembeni
+w Jipe
+w Mwaniko
+w Chomvu
+w Ngujini
+w Kirya
+w Kilomeni
+w Shigatini
+w Lang'ata
+
+d Rombo
+w Katangara Mrere
+w Kelamfua Mokala
+w Keni Aleni
+w Keni Mengeni
+w Kirongo Samanga
+w Kirwa Keni
+w Kitirima Kingachi
+w Mahida Holili
+w Makiidi
+w Mamsera
+w Mengwe Manda
+w Motamburu Kitendeni
+w Mrao Keryo
+w Nanjala Reha
+w Olele
+w Shimbi
+w Tarakea Motamburu
+w Ubetu Kahe
+w Ushiri Ikuini
+
+d Same
+w Bombo
+w Bendera
+w Bwambo
+w Chome
+w Hedaru
+w Kihurio
+w Kirangare
+w Kisiwani
+w Makanya
+w Maore
+w Mhezi
+w Mpinji
+w Mshewa
+w Msindo
+w Mtii
+w Mwembe
+w Myamba
+w Ndungu
+w Njoro
+w Ruvu
+w Same Mjini
+w Suji
+w Vudee
+w Vuje
+w Vunta
+
+###############################################
+
+r Lindi
+
+d Kilwa
+w Chumo
+w Kandawale
+w Kijumbi
+w Kikole
+w Kipatimu
+w Kiranjeranje
+w Kivinje Singino
+w Lihimalyao
+w Likawage
+w Mandawa
+w Masoko
+w Miguruwe
+w Mingumbi
+w Miteja
+w Nanjirinji
+w Njinjo
+w Pande
+w Songosongo
+w Tingi
+
+d Lindi Rural
+w Chikonji
+w Chiponda
+w Kilolambwani
+w Kitomanga
+w Kiwalala
+w Kiwawa
+w Mandwanga
+w Matimba
+w Mbanja
+w Milola
+w Mingoyo
+w Mipingo
+w Mchinga
+w Mnara
+w Mnolela
+w Mtama
+w Mtua
+w Nachunyu
+w Nahukahuka
+w Namupa
+w Nangaru
+w Ng'apa
+w Nyangamara
+w Nyangao
+w Nyengedi
+w Rutamba
+w Sudi
+w Tandangongoro
+
+d Lindi Urban
+w Jamhuri
+w Makonde
+w Matopeni
+w Mikumbe
+w Mitande
+w Msinjahili
+w Mtanda
+w Mwenge
+w Nachingwea
+w Ndoro
+w Rahaleo
+w Rasbura
+w Wireless
+
+d Liwale
+w Barikiwa
+w Kiang'ara
+w Kibutuka
+w Kimambi
+w Liwale B
+w Liwale Mjini
+w Makata
+w Mangirikiti
+w Mbaya
+w Mihumo
+w Mirui
+w Mkutano
+w Mlembwe
+w Mpigamiti
+w Nangano
+w Ngongowele
+
+d Nachingwea
+w Chiola
+w Kiegi
+w Kilima Rondo
+w Kilimani Hewa
+w Kipara Mnero
+w Lionja
+w Marambo
+w Matekwe
+w Mbondo
+w Mkoka
+w Mkotokuyana
+w Mnero
+w Mnero Ngongo
+w Mpiruka
+w Mtua
+w Naipanga
+w Naipingo
+w Namapwia
+w Namatula
+w Nambambo
+w Namikango
+w Nangowe
+w Nditi
+w Ndomoni
+w Ruponda
+w Stesheni
+
+d Ruangwa
+w Chienjere
+w Chunyu
+w Likunja
+w Luchelegwa
+w Mbekenyera
+w Makanjiro
+w Malolo
+w Mandarawe
+w Mandawa
+w Mnacho
+w Nambilanje
+w Namichiga
+w Narung'ombe
+w Nkowe
+w Ruangwa
+
+###############################################
+
+r Manyara
+
+d Babati
+w Arri
+w Babati
+w Bashnet
+w Bonga
+w Dabil
+w Dareda
+w Duru
+w Gallopo
+w Gidas
+w Kiru 
+w Madunga 
+w Magara
+w Magugu
+w Mamire
+w Mwada
+w Nkaiti
+w Qash
+w Riroda
+w Sigino
+w Singe
+w Ufana
+
+d Hanang
+w Badangdalalu
+w Bassodesh
+w Bassotu
+w Endasaki
+w Ganana
+w Gehandu
+w Gendabi
+w Getanuwas
+w Gidahababieg
+w Gisambalang
+w Gitting
+w Hidet
+w Hirbadaw
+w Katesh
+w Laghanga
+w Masakta
+w Masqaroda
+w Measkaron
+w Mogitu
+w Nangwa
+w Simbay
+w Sirop
+
+d Kiteto
+w Bwagamoy
+w Dongo
+w Dosidosi
+w Engusero
+w Kibaya
+w Kijungu
+w Lengatei
+w Makame
+w Matui
+w Ndedo
+w Njoro
+w Olboloti
+w Partimbo
+w Songambele
+w Sunya
+
+d Mbulu
+w Bargish
+w Bashay
+w Daudi
+w Dongobesh
+w Gehandu
+w Haidom
+w Kainam
+w Maghang
+w Maretadu
+w Masieda
+w Mbulu Mjini
+w Murray
+w Sanu
+w Tlawi
+w Tumati
+w Yaeda Chini
+
+d Simanjiro
+w Emboreet
+w Loibor-Siret
+w Loiborsoit
+w Mererani
+w Msitu wa Tembo
+w Naberera
+w Ngorika
+w Oljoro No. 5
+w Orkesumet
+w Ruvu-Remit
+w Shambarai
+w Terrat
+
+###############################################
+
+r Mara
+
+d Bunda
+w Bunda
+w Butimba
+w Guta
+w Hunyari
+w Igundu
+w Iramba
+w Kabasa
+w Kisorya
+w Kunzugu
+w Mcharo
+w Mihingo
+w Mugeta
+w Namhula
+w Nansimo
+w Neruma
+w Nyamuswa
+w Salama
+w Sazira
+w Wariku
+
+d Musoma Rural
+w Buhemba
+w Bukabwa
+w Bukima
+w Bukumi
+w Bugwema
+w Buruma
+w Buswahili
+w Butiama
+w Butuguri
+w Bwasi
+w Bwirege
+w Etaro
+w Kiriba
+w Kukirango
+w Kyanyari
+w Makojo
+w Masaba
+w Mugango
+w Murangi
+w Muriazi
+w Nyambono
+w Nyamimange
+w Nyamrandirira
+w Nyakatende
+w Nyankanga
+w Suguti
+w Tegeruka
+
+d Musoma Urban
+w Buhare
+w Bweri
+w Iringo
+w Kamunyonge
+w Kigera
+w Kitaji
+w Makoko
+w Mukendo
+w Mwigobero
+w Mwisenge
+w Nyakato
+w Nyamatare
+w Nyasho
+
+d Serengeti
+w Kenyamonta
+w Busawe
+w Kisaka
+w Kebanchabancha
+w Ring'wani
+w Rung'abure
+w Machochwe
+w Kisangura
+w Mugumu Mjini
+w Ikoma
+w Natta
+w Issenye
+w Rigwicha
+w Nyambureti
+w Nyamoko
+w Manchira
+w Kyambahi
+w Nyamatare
+
+d Tarime
+w Binagi
+w Bukura
+w Bukwe
+w Bumera
+w Goribe
+w Gorong'a
+w Ikoma
+w Kemambo
+w Kibasuka
+w Kigunga
+w Kirogo
+w Kisumwa
+w Kitembe
+w Komuge
+w Koryo
+w Kyang'ombe
+w Manga
+w Matongo
+w Mirare
+w Mkoma
+w Muriba
+w Mwema
+w Nyahongo
+w Nyakonga
+w Nyamagaro
+w Nyamtinga
+w Nyamunga
+w Nyamwaga
+w Nyandoto
+w Nyanungu
+w Nyarero
+w Nyarokoba
+w Nyathorogo
+w Pemba
+w Rabour
+w Roche
+w Sirari
+w Susuni
+w Tai
+w Tarime
+w Turwa
+
+###############################################
+
+r Mbeya
+
+d Chunya
+w Chalangwa
+w Chokaa
+w Ifumbo
+w Itewe
+w Galula
+w Gua
+w Kambikatoto
+w Kanga
+w Kapalala
+w Lupa Tingatinga
+w Luwalaje
+w Mafyeko
+w Makongorosi
+w Mamba
+w Matwiga
+w Mbangala
+w Mbugani
+w Mbuyuni
+w Mkwajuni
+w Mtanila
+w Namkukwe
+w Ngwala
+w Totowe
+
+d Ileje
+w Bupigu
+w Chitete
+w Ibaba
+w Ikinga
+w Isongole
+w Itale
+w Itumba
+w Kafule
+w Lubanda
+w Luswisi
+w Malangali
+w Mbebe
+w Ndola
+w Ngulilo
+w Ngulugulu
+w Sange
+
+d Kyela
+w Bujonde
+w Busole
+w Ikama
+w Ikolo
+w Ipande
+w Ipinda
+w Kajunjumele
+w Katumba Songwe
+w Kyela Mjini
+w Lusungo
+w Makwale
+w Matema
+w Mwaya
+w Ngana
+w Ngonga
+
+d Mbarali
+w Chimala
+w Igurusi
+w Madibira
+w Mahongole
+w Mapogoro
+w Mawindi
+w Msangaji
+w Ruiwa
+w Rujewa
+w Ubaruku
+w Utengule/Usangu
+
+d Mbeya Rural
+w Bonde la Usongwe
+w Igale
+w Ihango
+w Ijombe
+w Ikukwa
+w Ilembo
+w Ilungu
+w Inyala
+w Isuto
+w Iwiji
+w Iwindi
+w Iyunga Mapinduzi
+w Mshewe
+w Santilya
+w Tembela
+w Ulenje
+w Utengule Usongwe
+
+d Mbeya Urban
+w Forest
+w Ghana
+w Iduda
+w Iganjo
+w Iganzo
+w Igawilo
+w Ilemi
+w Ilomba
+w Isanga
+w Isyesye
+w Itagano
+w Itende
+w Itezi
+w Itiji
+w Iwambi
+w Iyela
+w Iyunga
+w Iziwa
+w Kalobe
+w Maanga
+w Mabatini
+w Maendeleo
+w Majengo
+w Mbalizi Road
+w Mwakibete
+w Mwansekwa
+w Mwansanga
+w Nonde
+w Nsalaga
+w Nsoho
+w Nzovwe
+w Ruanda
+w Sinde
+w Sisimba
+w Tembela
+w Uyole
+
+d Mbozi
+w Chilulumo
+w Chitete
+w Chiwezi
+w Halungu
+w Igamba
+w Ihanda
+w Isandula
+w Isansa
+w Itaka
+w Ivuna
+w Iyula
+w Kamsamba
+w Kapele
+w Mkangamo
+w Mlangali
+w Mlowo
+w Msangano
+w Msia
+w Myovizi
+w Myunga
+w Nambinzo
+w Ndalambo
+w Nyimbili
+w Ruanda
+w Vwawa
+w Tunduma
+
+d Rungwe
+w Bagamoyo
+w Bujela
+w Bulyaga
+w Ikuti
+w Ilima
+w Isange
+w Isongole
+w Itete
+w Kabula
+w Kambasegela
+w Kandete
+w Katumba
+w Kinyala
+w Kisegese
+w Kisiba
+w Kisondela
+w Kiwira
+w Kyimo
+w Lufingo
+w Lupata
+w Luteba
+w Lwangwa
+w Malindo
+w Masoko
+w Masukulu
+w Mpombo
+w Mpuguso
+w Nkunga
+w Rufiryo
+w Suma
+
+###############################################
+
+r Morogoro
+
+d Kilombero
+w Chisano
+w Chita
+w Idete
+w Ifakara
+w Kibaoni
+w Kiberege
+w Kidatu
+w Kisawasawa
+w Lumelo
+w Mang'ula
+w Masagati
+w Mbingu
+w Mchombe
+w Mkula
+w Mlimba
+w Mofu
+w Sanje
+w Uchindile
+w Utengule
+
+d Kilosa
+w Berega
+w Chagongwe
+w Chakwale
+w Chanjale
+w Chanzuru
+w Dumila
+w Gairo
+w Iyogwe
+w Kasiki
+w Kibedya
+w Kidete
+w Kidodi
+w Kilangali
+w Kimamba A
+w Kimamba B
+w Kisanga
+w Lubuji
+w Luhembe
+w Lumuma
+w Mabwerebwere
+w Magole
+w Magomeni
+w Magubike
+w Malolo
+w Mamboya
+w Mandege
+w Masanze
+w Mbumi
+w Mikumi
+w Mkwatani
+w Msowero
+w Rubeho
+w Rudewa
+w Ulaya
+w Uleling'ombe
+w Vidunda
+w Zombo
+
+d Morogoro Rural
+w Bwakila Chini
+w Bwakila Juu
+w Kasanga
+w Kibogwa
+w Kibungo Juu
+w Kidugalo
+w Kinole
+w Kiroka
+w Kisaki
+w Kisemu
+w Kolero
+w Lundi
+w Mikese
+w Mkambalani
+w Mkulazi
+w Mkuyuni
+w Mngazi
+w Mvuha
+w Mtombozi
+w Ngerengere
+w Selembala
+w Singisa
+w Tawa
+w Tegetero
+w Tununguo
+
+d Morogoro Urban
+w Bigwa
+w Boma
+w Kichangani
+w Kihonda
+w Kilakala
+w Kingo
+w Kingolwira
+w Mafiga
+w Mazimbu
+w Mbuyuni
+w Mji Kuu
+w Mji Mpya
+w Mlimani
+w Mwembesongo
+w Mzinga
+w Sabasaba
+w Sultan Area
+w Uwanja wa Ndege
+w Uwanja wa Taifa
+
+d Mvomero
+w Bunduki
+w Diongoya
+w Doma
+w Hembeti
+w Kanga
+w Kibati
+w Kikeo
+w Langali
+w Maskati
+w Melela
+w Mhonda
+w Mlali
+w Mtibwa
+w Mvomero
+w Mzumbe
+w Sungaji
+w Tchenzema
+
+d Ulanga
+w Biro
+w Chirombola
+w Euga
+w Ilonga
+w Iragua
+w Isongo
+w Itete
+w Kichangani
+w Kilosa Mpepo
+w Lukande
+w Lupiro
+w Mahenge
+w Malinyi
+w Mbuga
+w Minepa
+w Msogezi
+w Mtimbira
+w Mwaya
+w Ngoheranga
+w Ruaha
+w Sali
+w Sofi
+w Usangule
+w Vigoi
+
+r Mtwara
+
+d Masasi
+w Chigugu
+w Chipuputa
+w Chiungutwa
+w Chiwata
+w Likokona
+w Lipumburu
+w Lisekese
+w Lukuledi
+w Lulindi
+w Lumesule
+w Maratani
+w Marika
+w Masasi
+w Masuguru
+w Mbuyuni
+w Mchaura
+w Mikangaula
+w Mkonona
+w Mkululu
+w Mkundi
+w Mnavira
+w Mpindimbi
+w Mwena
+w Namajani
+w Namalenga
+w Namatutwe
+w Nandete
+w Nanganga
+w Nangomba
+w Nanjota
+w Nanyumbu
+w Napacho
+w Sengenya
+w Sindano
+
+d Mtwara Rural
+w Madimba
+w Ziwani
+w Nanguruwe
+w Mahurunga
+w Kitaya
+w Kiromba
+w Njengwa
+w Nitekela
+w Nanyamba
+w Mtiniko
+w Dihimba
+w Mnima
+w Kitere
+w Ndumbwe
+w Mayanga
+w Naumbu
+w Chawi
+w Namtumbuka
+
+d Mtwara Urban
+w Chikongola
+w Chuno
+w Jangwani
+w Kisungure
+w Likombe
+w Magengeni
+w Majengo
+w Mitengo
+w Mtonya
+w Railway
+w Shangani
+w Ufukoni
+w Vigaeni
+
+d Newala
+w Chilangala
+w Chitekete
+w Chiwonga
+w Kitangari
+w Luchingu
+w Makote
+w Makukwe
+w Malatu
+w Maputi
+w Mchemo
+w Mcholi I
+w Mcholi II
+w Mkoma II
+w Mkunye
+w Mkwedu
+w Mnekachi
+w Mnyambe
+w Mtopwa
+w Namiyonga
+w Nanguruwe
+
+d Tandahimba
+w Chaume
+w Chigungwe
+w Kitama
+w Luagala
+w Lukokoda
+w Lyenje
+w Mahuta
+w Maundo
+w Michenjele
+w Mihambwe
+w Milongodi
+w Mdimba Mnyoma
+w Mkonojowano
+w Mkoreha
+w Mkundi
+w Mkwiti
+w Mnyawa
+w Namikupa
+w Nanhyanga
+w Naputa
+w Ngunja
+w Tandahimba
+
+###############################################
+
+r Mwanza
+
+d Geita
+w Bukoli
+w Bukondo
+w Bukwimba
+w Bulela
+w Busanda
+w Busolwa
+w Chigunga
+w Ihanamilo
+w Kafita
+w Kagu
+w Kakora
+w Kalangala
+w Kamena
+w Kamhanga
+w Kasamwa
+w Kaseme
+w Katoro
+w Kharumwa
+w Lubanga
+w Lwamgasa
+w Mtakuja
+w Mwingiro
+w Nkome
+w Nyachilulima
+w Nyakagomba
+w Nyakamwaga
+w Nyamalimbe
+w Nyang'hwale
+w Nyarugusu
+w Nyugwa
+w Nzera
+w Senga
+w Shabaka
+
+d Ilemela
+w Bugogwa
+w Kitangiri
+w Buswelu
+w Nyamanoro
+w Igoma
+w Ilemela
+w Kirumba
+w Nyakato
+w Pasiansi
+w Sangabuye
+
+d Kwimba
+w Bungulwa
+w Bupamwa
+w Fukalo
+w Hungumalwa
+w Igongwa
+w Iseni
+w Kikubuji
+w Lyoma
+w Maligisu
+w Malya
+w Mantare
+w Mhande
+w Mwabomba
+w Mwagi
+w Mwakilyambiti
+w Mwamala
+w Mwandu
+w Mwang'halanga
+w Ng'hundi
+w Ngudu
+w Ngula
+w Nyambiti
+w Nyamilama
+w Sumve
+w Wala
+
+d Magu
+w Badugu
+w Bujashi
+w Igalukilo
+w Kabita
+w Kahangara
+w Kalemela
+w Kiloleni
+w Kisesa
+w Kitongo
+w Kongolo
+w Lubugu
+w Lutale
+w Magu Mjini
+w Malili
+w Mkula
+w Mwamabanza
+w Mwamanga
+w Mwamanyili
+w Ngasamo
+w Ng'haya
+w Nkungulu
+w Nyaluhande
+w Nyanguge
+w Nyigogo
+w Shigala
+w Shishani
+w Sukuma
+
+d Misungwi
+w Buhingo
+w Bulemeji
+w Busongo
+w Idetemya
+w Igokelo
+w Ilujamate
+w Kanyelele
+w Kasololo
+w Kijima
+w Koromije
+w Luburi
+w Mbarika
+w Misasi
+w Misungwi
+w Mwaniko
+w Nhundulu
+w Shilalo
+w Sumbugu
+w Ukiriguru
+w Usagara
+
+d Nyamagana
+w Igogo
+w Isamilo
+w Kirumba
+w Kitangiri
+w Mbugani
+w Mirongo
+w Mkuyuni
+w Nyamagana
+w Nyamanoro
+w Pamba
+
+d Sengerema
+w Bupandwam'hela
+w Busisi
+w Buyagu
+w Buzilasoga
+w Chifunfu
+w Igalula
+w Kafunzo
+w Kagunga
+w Kalebezo
+w Kasungamile
+w Katunguru
+w Katwe
+w Kazunzu
+w Lugata
+w Maisome
+w Nyakalilo
+w Nyakasasa
+w Nyakasungwa
+w Nyamatongo
+w Nyamazugo
+w Nyanzenda
+w Nyehunge
+w Sengerema
+w Sima
+w Tabaruka
+
+d Ukerewe
+w Bukanda
+w Bukiko
+w Bukindo
+w Bukongo
+w Bukungu
+w Bwiro
+w Bwisya
+w Igalla
+w Ilangala
+w Irugwa
+w Kagera
+w Kagunguli
+w Kakerege
+w Mukituntu
+w Muriti
+w Murutunguru
+w Nakatunguru
+w Namagondo
+w Namilembe
+w Nansio
+w Nduruma
+w Ngoma
+w Nkilizya
+w Nyamanga
+
+###############################################
+
+r Pemba North
+
+d Micheweni
+w Micheweni
+w Msuka
+w Kinowe
+w Tumbe
+w Mgogoni
+w Shumba Viamboni
+w Finya
+w Konde
+w Wingwi Mapofu
+w Kiuyu Maziwa Ng'ombe
+w Makangale
+w Wingwi Njuguni
+w Shumba Mjini
+
+d Wete
+w Kipangani
+w Mtambwe Kaskazini
+w Fundo
+w Mchanga Mdogo
+w Kambini
+w Kojani
+w Ole
+w Kangagani
+w Kiuyu
+w Piki
+w Kisiwani
+w Gando
+w Ukunjwi
+w Pandani
+w Shengejuu
+w Bopwe
+w Utaani
+w Mtambwe Kusini
+
+###############################################
+
+r Pemba South
+
+d Chake Chake
+w Chanjaani
+w Wawi
+w Pujini
+w Ziwani
+w Ndagoni
+w Kwale
+w Vitongoji
+w Ng'ambwa
+w Shungi
+w Chonga
+w Mgelema
+w Kilindi
+w Tibirinzi
+w Chachani
+w Wara
+w Mvumoni
+w Matale
+w Wesha
+w Uwandani
+
+d Mkoani
+w Ngombeni
+w Makombeni
+w Makoongwe
+w Shidi
+w Mkanyageni
+w Michenzani
+w Chokocho
+w Kisiwa Panza
+w Kangani
+w Kengeja
+w Muambe
+w Kiwani
+w Mtambile
+w Mizingani
+w Ngwachani
+w Chambani
+w Wambaa
+w Mbuguan
+w Uweleni
+w Mtangani
+w Ukutini
+w Chumbageni
+
+###############################################
+
+r Pwani / Coast
+
+d Bagamoyo
+w Kiwangwa
+w Msata
+w Miono
+w Mkange
+w Magomeni
+w Dunda
+w Kiromo
+w Zinga
+w Yombo
+w Vigwaza
+w Talawanda
+w Chalinze
+w Lugoba
+w Ubenazomozi
+w Mbwewe
+w Kibindu
+
+d Kibaha
+w Kibaha
+w Kwala
+w Magindu
+w Maili Mmoja
+w Mlandizi
+w Ruvu
+w Soga
+w Tumbi
+w Visiga
+
+d Kisarawe
+w Cholesamvula
+w Kibuta
+w Kiluvya
+w Kisarawe
+w Kuruhi
+w Mafinzi
+w Maneromango
+w Marui
+w Marumbo
+w Masaki
+w Msanga
+w Msimbu
+w Mzenga
+w Vihingo
+w Vikumbulu
+
+d Mafia
+w Baleni
+w Jibondo
+w Kanga
+w Kilindoni
+w Kirongwe
+w Kiegeani
+w Mibulani
+
+d Mkuranga
+w Bupu
+w Kimanzichana
+w Kisiju
+w Kitomondo
+w Lukanga
+w Magawa
+w Mbezi
+w Mkamba
+w Mkuranga
+w Mwalusembe
+w Nyamato
+w Panzuo
+w Shungubweni
+w Tambani
+w Vikindu
+
+d Rufiji
+w Bungu
+w Chumbi
+w Ikwiriri
+w Kibiti
+w Kiongoroni
+w Mahege
+w Maparoni
+w Mbuchi
+w Mbwara
+w Mchukwi
+w Mgomba
+w Mkongo
+w Mtunda
+w Mwaseni
+w Ngorongo
+w Ruaruke
+w Salale
+w Umwe
+w Utete
+
+###############################################
+
+r Rukwa
+
+d Mpanda
+w Ikola
+w Ilela
+w Ilembo
+w Ilunde
+w Inyonga
+w Kabungu
+w Karema
+w Kashaulili
+w Kasokola
+w Katuma
+w Katumba
+w Kawajense
+w Kibaoni
+w Machimboni
+w Magamba
+w Mbede
+w Mamba
+w Mishamo
+w Misunkumilo
+w Mpanda Ndogo
+w Mtapenda
+w Mwese
+w Nsemulwa
+w Nsimbo
+w Shanwe
+w Sitalike
+w Ugalla
+w Urwira
+w Usevya
+w Utende
+
+d Nkasi
+w Namanyere
+w Mtenga
+w Mkwamba
+w Chala
+w Kipande
+w Isale
+w Kate
+w Sintali
+w Kala
+w Wampelembe
+w Ninde
+w Kirando
+w Kabwe
+
+d Sumbawanga Rural
+w Kaengesa
+w Kalambazite
+w Kaoze
+w Kasanga
+w Katazi
+w Kipeta
+w Laela
+w Legezamwendo
+w Lusaka
+w Mambwekenya
+w Mambwenkoswe
+w Matai
+w Miangalua
+w Milepa
+w Mkowe
+w Mpui
+w Msanzi
+w Mtowisa
+w Muze
+w Mwazye
+w Mwimbi
+w Sandalula
+w Sopa
+
+d Sumbawanga Urban
+w Izia
+w Kasense
+w Katandala
+w Kizwite
+w Malangali
+w Matanga
+w Mazwi
+w Milanzi
+w Mollo
+w Ntendo
+w Old Sumbawanga
+w Pito
+w Senga
+
+###############################################
+
+r Ruvuma
+
+d Mbinga
+w Chiwanda
+w Kigonsera
+w Kihagara
+w Kihangi Mahuka
+w Kilimani
+w Kilosa
+w Kingerikiti
+w Kitura
+w Langiro
+w Liparamba
+w Lipingo
+w Linda
+w Litembo
+w Lituhi
+w Litumbandyosi
+w Liuli
+w Maguu
+w Matiri
+w Mbaha
+w Mbamba Bay
+w Mbangamao
+w Mbinga Urban
+w Mbuji
+w Mikalanga
+w Mkumbi
+w Mpapa
+w Mpepai
+w Mtipwili
+w Myangayanga
+w Ndongosi
+w Ngima
+w Ngumbo
+w Nyoni
+w Ruanda
+w Tingi
+w Ukata
+w Utiri
+
+d Namtumbo
+w Matimira
+w Mkongo
+w Ligera
+w Lusewa
+w Magazini
+w Msindo
+w Luchili
+w Namabengo
+w Kitanda
+w Luegu
+w Namtumbo
+w Mgombasi
+w Rwinga
+
+d Songea Rural
+w Wino
+w Ndongosi
+w Matumbi/Ifinga
+w Tanga
+w Gumbiro
+w Mpitimbi 
+w Muhukuru
+w Magagura
+w Litisha
+w Kilagano
+w Maposeni
+w Lilambo
+w Mahanje
+
+d Songea Urban
+w Songea Mjini
+w Majengo
+w Misufini
+w Mfaranyaki
+w Lizaboni
+w Matarawe
+w Bomba Mbili
+w Matogoro
+w Ruvuma
+w Subira
+w Ruhuwiko
+w Mshangano
+w Mletele
+
+d Tunduru
+w Kalulu
+w Ligunga
+w Mlingoti Mashariki
+w Mindu
+w Ngapa
+w Nakapanya
+w Muhuwesi
+w Tuwemacho
+w Ligoma
+w Misechela
+w Namasakata
+w Mtina
+w Mchesi
+w Lukumbule
+w Nalasi
+w Mchoteka
+w Marumba
+w Mbesa
+w Mlingoti Magharibi
+w Kidodoma
+w Nandembo
+w Nampungu
+w Matemanga
+w Namwinyu
+
+###############################################
+
+r Shinyanga
+
+d Bariadi
+w Bariadi
+w Bumera
+w Bunamhala
+w Chinamili
+w Dutwa
+w Gamboshi
+w Ikungulyabashashi
+w Kasoli
+w Kinang'weli
+w Lagangabilili
+w Lugulu
+w Mbita
+w Mhango
+w Mhunze
+w Mwadobana
+w Mwamapalala
+w Mwaswale
+w Mwaubingi
+w Nkololo
+w Nkoma
+w Nyakabindi
+w Sagata
+w Sakwe
+w Sapiwi
+w Somanda
+w Zagayu
+
+d Bukombe
+w Bukandwe
+w Bukombe
+w Ilolangulu
+w Ikunguigazi
+w Iponya
+w Iyogelo
+w Lugunga
+w Masumbwe
+w Mbongwe
+w Nyasato
+w Runzewe
+w Ushirika
+w Ushirombo
+w Uyovu
+
+d Kahama
+w Bugarama
+w Bulige
+w Busangi
+w Bulungwa
+w Chambo
+w Chela
+w Chona
+w Idahina
+w Igwamanoni
+w Isagehe
+w Isaka
+w Jana
+w Kihama Mjini
+w Kilago
+w Kinaga
+w Kinamapula
+w Kisuke
+w Lunguya
+w Malunga
+w Mhongolo
+w Mpunze
+w Mwalugulu
+w Mwendakulima
+w Ngaya
+w Ngongwa
+w Ntobo
+w Nyandekwa
+w Nyihogo
+w Segese
+w Ukune
+w Ulowa
+w Ushetu
+w Uyogo
+w Zongomera
+
+d Kishapu
+w Bubiki
+w Bunambiyu
+w Itima
+w Kiloleli
+w Kishapu
+w Lagana
+w Masanga
+w Mondo
+w Mwadui Lohumbo
+w Mwakipoya
+w Mwamalasa
+w Mwamashele
+w Ngofila
+w Seke/Bukoro
+w Shagihilu
+w Somagedi
+w Songwa
+w Talaga
+w Uchunga
+w Ukenyenge
+
+d Maswa
+w Badi
+w Buchambi
+w Budekwa
+w Busilili
+w Dakama
+w Ipililo
+w Isango
+w Kadoto
+w Kulimi
+w Lalango
+w Malampaka
+w Masela
+w Mpindo
+w Nguliguli
+w Nyabubinza
+w Nyalikungu
+w Shishiyu
+w Sukuma
+
+d Meatu
+w Bukundi
+w Imalaseko
+w Itinje
+w Kisesa
+w Kimali
+w Lingeka
+w Lubiga
+w Mwabuma
+w Mwabusalu
+w Mwabuzo
+w Mwamalole
+w Mwamanongu
+w Mwamishali
+w Mwandoya
+w Mwanhuze
+w Mwanjoro
+w Ng'hoboko
+w Nkoma
+w Sakasaka
+
+d Shinyanga Rural
+w Didia
+w Ilola
+w Imesela
+w Iselamagazi
+w Itwangi
+w Lyabukande
+w Mwakitolyo
+w Mwamala
+w Mwantini
+w Pandagichiza
+w Salawe
+w Samuye
+w Solwa
+w Tinde
+w Usanda
+w Usule
+
+d Shinyanga Urban
+w Chamaguha
+w Chibe
+w Ibadakuli
+w Ibinzamata
+w Kambarage
+w Kitangili
+w Kizumbi
+w Kolandoto
+w Mwamalili
+w Mwawaza
+w Ndala
+w Ngokolo
+w Shinyanga Mjini
+
+###############################################
+
+r Singida
+
+d Iramba
+w Gumanga
+w Ibagu
+w Kaselya
+w Kidaru
+w Kiombi
+w Kinampanda
+w Kinyangali
+w Kisiriri
+w Kyengege
+w Iguguno
+w Ilunda
+w Mbelekese
+w Mpambala
+w Msingi
+w Mtekente
+w Mtoa
+w Mwanga
+w Mwangeza
+w Ndago
+w Ndugutu
+w Nkinto
+w Ntwike
+w Shelui
+w Ulemo
+w Urughu
+w Tulya
+
+d Manyoni
+w Aghondi
+w Chikola
+w Chikuyu
+w Heka-Azimio
+w Idodyandole
+w Ipande
+w Isseke
+w Itigi
+w Kilimatinde
+w Kintinku
+w Majiri
+w Makanda
+w Makuru
+w Manyoni
+w Maweni
+w Mgandu
+w Nkonko
+w Rungwa
+w Sanjaranda
+w Sanza
+w Sasajira
+
+d Singida Rural
+w Dungunyi
+w Kinyeto
+w Ihanja
+w Ikhanoda
+w Ikungi
+w Ilongero
+w Irisya
+w Issuna
+w Maghojoa
+w Makuro
+w Mangonyi
+w Merya
+w Mgori
+w Mgungira
+w Minyughe
+w Misughaa
+w Msisi
+w Mtinko
+w Mudida
+w Muhintiri
+w Mungaa
+w Mwaru
+w Ngimu
+w Ntuntu
+w Puma
+w Sepuka
+w Siuyu
+w Ughandi
+
+d Singida Urban
+w Ipembe
+w Kindai
+w Majengo
+w Mandewa
+w Mitunduruni
+w Mtamaa
+w Mtipa
+w Mughanga
+w Mungumaji
+w Mwankoko
+w Unyambwa
+w Unyamikumbi
+w Utemini
+
+###############################################
+
+r Tabora
+
+d Igunga
+w Bukoko
+w Chabutwa
+w Choma
+w Igoweko
+w Igunga
+w Igurubi
+w Isakamaliwa
+w Itumba
+w Itunduru
+w Kining'inila
+w Kinungu
+w Mbutu
+w Mwamashiga
+w Mwamashimba
+w Mwashiku
+w Mwisi
+w Naga
+w Ndembezi
+w Ngulu
+w Nguvumoja
+w Nkinga
+w Ntobo
+w Nyandekwa
+w Simbo
+w Sungwizi
+w Ziba
+
+d Nzega
+w Budushi
+w Bukene
+w Igusule
+w Ijanija
+w Ikindwa
+w Isagenhe
+w Isanzu
+w Itilo
+w Itobo
+w Kahamanhalanga
+w Karitu
+w Kasela
+w Lusu
+w Magengati
+w Mambali
+w Mbogwe
+w Miguwa
+w Milambo-Itobo
+w Mizibaziba
+w Mogwa
+w Muhugi
+w Mwakanshahala
+w Mwamala
+w Mwangoye
+w Nata
+w Ndala
+w Nkiniziwa
+w Nzega Mjini
+w Nzega Ndogo
+w Puge
+w Semembela
+w Shigamba
+w Sigili
+w Tongi
+w Uduka
+w Utwigu
+w Wela
+
+d Sikonge
+w Chabutwa
+w Igigwa
+w Ipole
+w Kilolei
+w Kiloli
+w Kipanga
+w Kipili
+w Kitunda
+w Pangale
+w Sikonge
+w Tutuo
+
+d Uyui
+w Bukumbi
+w Goweko
+w Ibiri
+w Igalula
+w Ikongolo
+w Ilolangulu
+w Isikizya
+w Kizengi
+w Loya
+w Lutende
+w Mabama
+w Magiri
+w Ndono
+w Shitage
+w Ufumula
+w Upuge
+w Usagali
+
+d Tabora Urban
+w Chemchem
+w Cheyo
+w Gongoni
+w Ipuli
+w Isevya
+w Itetemia
+w Itonjanda
+w Kakola
+w Kalunde
+w Kanyenye
+w Kiloleni
+w Kitete
+w Malolo
+w Mbugani
+w Misha
+w Mtendeni
+w Ndevelwa
+w Ng'ambo
+w Tambukareli
+w Tumbi
+w Urambo
+w Uyui
+w Urambo
+
+d Urambo
+w Ichemba
+w Igagala
+w Igombe Mkulu
+w Imalamakoye
+w Itundu
+w Kaliua
+w Kanindo
+w Kapilula
+w Kashishi
+w Kazaroho
+w Kiloleni
+w Milambo
+w Muungano
+w Mwongozo
+w Songambele
+w Ugunga
+w Ukondamoyo
+w Ukumbisiganga
+w Urambo
+w Ushokola
+w Usinge
+w Usisya
+w Usoke
+w Uyowa
+w Uyumbu
+w Vumilia
+
+###############################################
+
+r Tanga
+
+d Handeni
+w Chanika
+w Kabuku
+w Kang'ata
+w Kiva
+w Komkonga
+w Kwaluguru
+w Kwamatuku
+w Kwankonje
+w Kwamsisi
+w Kwasunga
+w Kwedizinga
+w Mazingara
+w Mgambo
+w Misima
+w Mkata
+w Ndolwa
+w Segera
+w Sindeni
+w Vibaoni
+
+d Kilindi
+w Jaila
+w Kikunde
+w Kilindi
+w Kimbe
+w Kisangasa
+w Kwediboma
+w Lwande
+w Masagalu
+w Mkindi
+w Msanja
+w Mvungwe
+w Negero
+w Pagwi
+w Saunyi
+w Songe
+
+d Korogwe
+w Bungu
+w Chekelei
+w Dindira
+w Kizara
+w Kerenge
+w Korogwe
+w Kwagunda
+w Kwamndolwa
+w Lutindi
+w Magoma
+w Makuyuni
+w Mashewa
+w Mazinde
+w Mkalamo
+w Mkomazi
+w Mombo
+w Msambiazi
+w Mnyuzi
+w Ngombezi
+w Vugiri
+
+d Lushoto
+w Baga
+w Bumbuli
+w Funta
+w Gare
+w Hemtoye
+w Kwai
+w Lunguza
+w Lushoto
+w Malibwi
+w Malindi
+w Makanya
+w Mamba
+w Mayo
+w Mbaramo
+w Mbuzii
+w Mgwashi
+w Mlalo
+w Mlingano
+w Mlola
+w Mnazi
+w Mng'aro
+w Mponde
+w Mtae
+w Mwangoi
+w Ngwelo
+w Rangwi
+w Shume
+w Soni
+w Sunga
+w Tamota
+w Ubiri
+w Vuga
+
+d Muheza
+w Bwembwera
+w Daluni
+w Duga
+w Gombero
+w Kicheba
+w Kigongoi
+w Lusanga
+w Kigombe
+w Kilulu
+w Kisiwani
+w Kwafungo
+w Kwale
+w Magila
+w Magoroto
+w Majengo
+w Manza
+w Maramba
+w Masuguru
+w Mbaramo
+w Mhinduro
+w Misilai
+w Misozwe
+w Mkinga
+w Mkuzi
+w Moa
+w Mtimbwane
+w Mtindiro
+w Mwakijembe
+w Ngomeni
+w Nkumba
+w Pande
+w Potwe
+w Songa
+w Tingeni
+w Zirai
+
+d Pangani
+w Bushiri
+w Bweni
+w Kimanga
+w Kipumbwi
+w Madanga
+w Mikunguni
+w Mkalamo
+w Mkwaja
+w Mwera
+w Pangani Magharibi
+w Pangani Mashariki
+w Tungamaa
+w Ubangaa
+
+d Tanga
+w Central
+w Chongoleani
+w Chumbageni
+w Duga
+w Kiomoni
+w Kirare
+w Mabawa
+w Mabokweni
+w Majengo
+w Makorora
+w Marungu
+w Maweni
+w Msambweni
+w Mwanzange
+w Mzingani
+w Mzizima
+w Ngamiani Kaskazini
+w Ngamiani Kati
+w Ngamiani Kusini
+w Nguvumali
+w Pongwe
+w Tangasisi
+w Tongoni
+w Usagara
+
+###############################################
+
+r Zanzibar Central/South
+
+d Zanzibar Central
+w Dunga Bweni
+w Ubago
+w Kidimni
+w Machui
+w Kiboje Mwembe Shauri
+w Miwani
+w Kiboje Mkwajuni
+w Ghana
+w Koani
+w Mgeni Haji
+w Uzini
+w Mitakawani
+w Tunduni
+w Bambi
+w Pagali
+w Umbuji
+w Mchangani
+w Dunga Kiembeni
+w Ndijani
+w Jendele
+w Chwaka
+w Marumbi
+w Uroa
+w Pongwe
+w Jumbi
+w Tunguu
+w Binguni
+w Cheju
+w Bungi
+w Unguja Ukuu Kaepwani 
+w Kikungwi
+w Uzi
+w Ng'ambwa
+w Charawe
+w Ukongoroni
+w Michamvi
+w Mpapa
+w Unguja Ukuu Kaebona
+
+d Zanzibar South
+w Nganani
+w Kijini
+w Mzuri
+w Kajengwa
+w Jambiani Kikadini
+w Mtende
+w Kibuteni
+w Kizimkazi Dimbani
+w Kizimkazi Mkunguni
+w Muyuni A
+w Muyuni B
+w Muyuni C
+w Pete
+w Muungoni
+w Paje
+w Jambiani Kibigija
+w Bwejuu
+w Kitogani
+
+###############################################
+r Zanzibar North
+
+d Zanzibar North A
+w Mkokotoni
+w Mto Pwani
+w Pale
+w Tumbatu Gomani
+w Tumbatu Jongowe 
+w Mkwajuni
+w Kibeni
+w Pitanazako
+w Potoa
+w Fukuchani
+w Kidoti
+w Tazari
+w Kigunda
+w Nungwi
+w Matemwe
+w Kijini
+w Pwani Mchangani
+w Gamba
+w Moga
+w Chaani Masingini
+w Mchenza Shauri
+w Chaani Kubwa
+w KiKobweni
+w Bandamaji
+w Kinyasini 
+w Kandwi
+
+d Zanzibar North B
+w Misufini
+w Makoba
+w Manga Pwani
+w Fujoni
+w Kiomba Mvua
+w Donge Mchangani
+w Mkadini
+w Zingwe Zingwe
+w Kitope 	Rural
+w Mahonda
+w Donge Mnyimbi
+w Donge Mtambile
+w Kinduni
+w Donge Karange
+w Donge Mbiji
+w Donge Kipange
+w Donge Vijibweni
+w Upenja
+w Kiwengwa
+w Pangeni
+w Kilombero
+w Mgambo
+w Muwwanda
+
+###############################################
+
+r Zanzibar Urban/West
+
+d Zanzibar Urban
+w Amaani
+w Chumbuni
+w Gulioni
+w Jang'ombe
+w Karakana
+w Kidongo Chekundu
+w Kikwajuni Bondeni
+w Kikwajuni Juu
+w Kilimahewa
+w Kilimani
+w Kiponda
+w Kisima Majongoo
+w Kwaalamsha
+w Kwaalinato
+w Kwahani
+w Kwamtipura
+w Magomeni
+w Makadara
+w Malindi
+w Matarumbeta
+w Mchangani
+w Miembeni
+w Mikunguni
+w Mkele
+w Mkunazini
+w Mlandege
+w Mpendae
+w Muembe Ladu
+w Muembe Makumi
+w Muungano
+w Mwembeshauri
+w Mwembetanga
+w Nyerere
+w Rahaleo
+w Sebleni
+w Shangani
+w Shaurimoyo
+w Sogea
+w Urusi
+w Vikokotoni
+
+d Zanzibar West
+w Bububu
+w Bumbwisudi
+w Bweleo
+w Chuini
+w Chukwani
+w Dimani
+w Dole
+w Fumba
+w Fuoni Kibondeni
+w Fuoni Kijitoupele
+w Kama
+w Kianga
+w Kiembe Samaki
+w Kizimbani
+w Kombeni
+w Magogoni
+w Maugani
+w Mbuzini
+w Mfenesini
+w Mtoni
+w Mtoni Kidatu
+w Mto Pepo
+w Mwakaje
+w Mwanakwerekwe
+w Mwanyanya
+w Mwera
+w Shakani
+w Tomondo
+w Welezo
+
+###############################################

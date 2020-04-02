@@ -1,0 +1,3 @@
+page[:errors].hide
+page[:report_link].replace_html :partial => "report_link"
+page[:search_results].replace_html :partial => "search_result1"

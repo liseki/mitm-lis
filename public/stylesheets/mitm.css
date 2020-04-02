@@ -1,0 +1,56 @@
+body {
+	margin: 10px 0;
+	padding: 0;
+	font-size: 12px;
+  	font-family: "Trebuchet MS", "Lucida Sans Unicode", Arial, sans-serif;
+	background-color: #666;
+}
+img {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+form, p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+p {
+	line-height: 1.3em;
+}
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #0080c0;
+	margin: 0 0 5px 0;
+	background: url(../images/title_img.gif) left center no-repeat;
+	padding-left: 25px;
+}
+h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	color: #0080c0;
+}
+input, textarea {
+	margin: 0;
+	padding: 0;
+  	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+div#errors, div#notice {
+	color: red;
+}
+div#errors {
+	background-color: #E6E6E6;
+	border: 1px solid red;
+	margin-bottom: 5px;
+}
+div.error_msg_title {
+	background-color: red;
+	color: #fff;
+	font-weight: bold;
+	padding-left: 5px;
+}
+div#errors ul {
+}

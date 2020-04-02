@@ -1,0 +1,1 @@
+page[:select_ward].replace_html :partial => "wards"

@@ -1,0 +1,2 @@
+page['errors'].hide
+page.select('form').each {|f| f.reset}

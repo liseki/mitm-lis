@@ -1,0 +1,22 @@
+<div id="errors" style="display: none;"></div>
+
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="index">Trend Analysis</h2>
+
+<div id="trends_menu">
+<%= link_to_remote(image_tag('licences.gif'), :update => "trends_func", :url => {:action => "trends_function", :option => 1}, 
+		:loading => "Element.show('trends_menu_ind')", :complete => "Element.hide('trends_menu_ind')") %>
+<%= link_to_remote(image_tag('investment.gif'), :update => "trends_func", :url => {:action => "trends_function", :option => 2},
+		:loading => "Element.show('trends_menu_ind')", :complete => "Element.hide('trends_menu_ind')") %>
+<%= image_tag('loading2.gif', :id=> "trends_menu_ind", :style => "display:none") %>
+</div>
+
+<div id="trends_func"></div>
+
+</div></div></div></div>
+
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<div id="report_link"></div>
+<div id="trends_results"><h3>Trends</h3>Waiting for analysis.</div>
+</div></div></div></div>

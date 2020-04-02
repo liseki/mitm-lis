@@ -1,0 +1,39 @@
+<div id="errors" style="display: none;"></div>
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="categories">BUSINESS CATEGORIES: Lines of Business Schedule A</h2>
+
+<% if session[:mitm_user_type].to_i >= 0 -%>
+  <% form_remote_tag :url => {:action => "cancel_new_category"} do -%>
+  <%= submit_tag "reset", {:id => "cancel_new_category_bt"} %> 
+  <% end -%>
+<% end -%>
+
+<% if session[:mitm_user_type].to_i == 1 -%>
+  <div id="cat_menu">
+    <span class="cat_menu"><%= link_to_remote(image_tag('new_cat.gif'), :url => {:action => "show_function", :option => 1}, 
+    :loading => "new Element.show('cat_menu_ind')", :complete => "new Element.hide('cat_menu_ind')") %></span>
+    <span class="cat_menu"><%= link_to_remote(image_tag('new_sub_cat.gif'), :url => {:action => "show_function", :option => 2}, 
+    :loading => "new Element.show('cat_menu_ind')", :complete => "new Element.hide('cat_menu_ind')") %></span>
+    <span class="cat_menu"><%= link_to_remote(image_tag('rename_cat.gif'), :url => {:action => "show_function", :option => 3}, 
+    :loading => "new Element.show('cat_menu_ind')", :complete => "new Element.hide('cat_menu_ind')") %></span>
+    <span class="cat_menu"><%= link_to_remote(image_tag('move_cat.gif'), :url => {:action => "show_function", :option => 4}, 
+    :loading => "new Element.show('cat_menu_ind')", :complete => "new Element.hide('cat_menu_ind')") %></span>
+    <span class="cat_menu"><%= link_to_remote(image_tag('delete_cat.gif'), :url => {:action => "show_function", :option => 5}, 
+    :loading => "new Element.show('cat_menu_ind')", :complete => "new Element.hide('cat_menu_ind')") %></span>
+    <span id="cat_menu_ind" style="display: none;"><%= image_tag 'loading2.gif' %></span>
+  </div>
+<% end -%>
+<div id="cat_function"></div>
+
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<% m = @root.categories_count; s = @categories.size - @root.categories_count; -%>
+<h3 id="category_count"><%= m %> Main Categor<%if m == 1 -%>y<%else-%>ies<%end-%> and 
+<%= s %> Sub-Categor<%if s == 1 -%>y<%else-%>ies<%end-%></h2>
+<div id="categories">
+<div id="category_list2"><div id="category_list">
+	<% for category in @categories -%>
+		<p class="cat_<%=category.ancestors.size%>"><%= category.name %></p>
+	<% end -%>
+</div></div></div></div></div></div></div>

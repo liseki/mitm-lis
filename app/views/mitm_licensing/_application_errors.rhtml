@@ -1,0 +1,29 @@
+<div class="error_msg_title">The following error<%if error_count(@error_num) > 1%>s<%end%> 
+prevented the creation of a new application!</div>
+<ul>
+<% if @error_num == 1 -%>
+	<li>Line of Business is not selected.</li>
+<% elsif @error_num == 2 -%>
+<% @application.errors.each do |attr, msg| %>
+	<li><%= msg %></li>
+	<% end -%>
+<% elsif @error_num == 3 -%>
+	<% @company.errors.each do |attr, msg| %>
+	<% if attr == "inc_or_reg_no" %>
+		<li><% if @company.business_type == "ltd" -%>Certificate of Incorporation No.<% else -%>Registration No.<% end -%> 
+		<%= msg -%></li>
+	<% else %><li><%= msg %></li><% end %><% end %>
+<% elsif @error_num == 4 -%>
+	<% @director.errors.each do |attr, msg| %>
+	<li><%= msg %></li>
+	<% end -%>
+<% elsif @error_num == 5 -%>
+	<% @tin.errors.each do |attr, msg| %>
+	<li><%= msg %></li>
+	<% end -%>
+<% elsif @error_num == 6 -%>
+	<% @address.errors.each do |attr, msg| %>
+	<li><%= msg %></li>
+	<% end -%>
+<% end %>
+</ul>

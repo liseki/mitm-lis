@@ -1,0 +1,33 @@
+<% if @option == 1 -%>
+	<% form_tag :action => "search", :option => 1, :app_lic => @app_lic, :start_date => @start_date, :end_date => @end_date, :b_type => @b, 
+				  :i_type => @i, :cat => @cat, :reg => @reg, :dis => @dis, :report => 1 do -%>
+
+	<%= select 'graph', 'graph_option', Search::GRAPH_OPTION2 %>
+	<%= submit_tag "generate report" %>
+	<% end -%>
+	
+<% elsif @option == 2 -%>
+	<% form_tag :action => "search", :option => 2, :app_lic => @app_lic, :start_date => @start_date, :end_date => @end_date, :cty => @cty, 
+				  :i_type => @i, :cat => @cat, :reg => @reg, :dis => @dis, :report => 1 do -%>
+	<%= select 'graph', 'graph_option', Search::GRAPH_OPTION2 %>
+	<%= submit_tag "generate report" %>
+	<% end -%>
+
+<% end -%>
+
+<h3><% if @option == 1 -%><%= trend_title %><%else-%><%= trend_title2 %><% end -%></h3>
+
+<%= image_tag session[:graph1] %>
+
+<table id="trends" class="mitm">
+<tr><th class="cat_name">sector</th><th class="licences">licences issued</th></tr>
+<% for i in 1..@category_distribution.size - 1 -%>
+      <% if @category_distribution[i] != 0 -%>
+            <tr><td class="cat_name"><%=h Category.find(i).name %></td>
+            <td class="licences"><%=h @category_distribution[i] %></td></tr>
+      <% end -%>
+<% end -%>      
+
+      <tr id="total"><td class="cat_name" id="total">TOTAL</td>
+      <td class="licences"><%=h @category_distribution[0] || 0 %></td></tr>
+</table>

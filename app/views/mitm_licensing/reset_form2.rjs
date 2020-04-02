@@ -1,0 +1,5 @@
+page['errors'].hide
+page.select('form').each {|f| f.reset}
+for i in 1..10
+      page["sub_category#{i}"].hide
+end

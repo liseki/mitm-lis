@@ -1,0 +1,85 @@
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="index"><%= @company.name %></h2>
+<div id="cmp_links">
+<% if session[:mitm_user_type].to_i >= 0 -%>
+  <%= link_to(image_tag('branch_application.gif'), :action => "branch_application", :id => @company) %>
+  <%= link_to(image_tag('new_app.gif'), :action => "new_application2", :id => @company ) %> 
+<% end -%>
+<%= link_to(image_tag('report.gif'), :action => "company_report", :id => @company) %></div>
+</div></div></div></div>
+
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>About the company</h3>
+<table class="app" id="app_sec1"><tr>
+<td><p class="app_element"><span class="app_title">Type: </span><%=h @company.business %></p></td>
+<td><% if @company.business_type != "ind" -%>
+<p class="app_element"><span class="app_title"><% if @company.business_type == "ltd" -%>Certificate of Inc #<% else %> Registration #<% end -%>: </span><%=h @company.inc_or_reg_no %></p>
+<% end -%></td>
+<td><p class="app_element"><span class="app_title">TIN: </span><%=h @company.tin.ti_num %></p></td></tr></table>
+<table class="app"><tr>
+<td><p class="app_element"><span class="app_title">Investment: </span><%=h @company.investment %> (<%= show_shareholders %>)</p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Director: </span><%=h @company.show_directors %></p></td></tr>
+<% if !@company.parent_id.nil? -%>
+<tr><td><p class="app_element"><span class="app_title">Subsidiary of: </span><%=link_to @company.parent.name, :action => "company", 
+						:id => @company.parent.id %></p></td></tr>
+<% end -%>
+</table>
+
+<h3>Address</h3>
+<table class="app" id="app_sec2"><tr>
+<td><p class="app_element"><span class="app_title">Ward: </span><%=h @company.address.ward.name %></p></td>
+<td><p class="app_element"><span class="app_title">District: </span><%=h @company.address.ward.district.name %></p></td>
+<td><p class="app_element"><span class="app_title">Region: </span><%=h @company.address.ward.district.region.name %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">P.O.Box: </span><%=h @company.address.p_o_box %></p></td>
+<td><p class="app_element"><span class="app_title">Street: </span><%=h @company.address.street %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Block: </span><%=h @company.address.block %></p></td>
+<td><p class="app_element"><span class="app_title">Plot #: </span><%=h @company.address.plot_no %></p></td>
+<td><p class="app_element"><span class="app_title">House #: </span><%=h @company.address.house_no %></p></td>
+</tr></table>
+
+<h3>Contacts</h3>
+<table class="app" id="app_sec3"><tr>
+<td><p class="app_element"><span class="app_title">Telephone: </span><%=h @company.address.telephone %></p></td>
+<td><p class="app_element"><span class="app_title">Fax: </span><%=h @company.address.fax %></p></td>
+<td><p class="app_element"><span class="app_title">Email: </span><%=h @company.address.email %></p></td>
+</tr></table>
+
+<h3>Applications and Licences</h3>
+<table class="app">
+<% for application in @company.licence_applications -%>
+	<tr><td><p class="app_element"><%=link_to application.category.name, :action => "application", :id => application %><br />
+	<% if application.processed %>
+		<% if !application.licence.temp_number.nil? && application.licence.licence_type == "t" -%>
+			(<span class="app_title">Temporary Licence #: </span><%=h application.licence.temp_number %> 
+			<span class="app_title">Issue Date: </span><%=h time_date_2(application.licence.temp_issue_date) %>)
+		<% elsif !application.licence.temp_number.nil? && application.licence.licence_type == "p" -%>
+			(<span class="app_title">Temporary Licence #: </span><%=h application.licence.temp_number %> 
+			<span class="app_title">Issue Date: </span><%=h time_date_2(application.licence.temp_issue_date) %>
+		<% end -%>
+		
+		<% if application.licence.licence_type == "p" -%>
+			<% if application.licence.temp_number.nil? -%>
+				(<span class="app_title">Permanent Licence #: </span><%=h application.licence.perm_number %>
+				<span class="app_title">Issue Date: </span><%=h time_date_2(application.licence.perm_issue_date) %>)
+			<% else-%>
+				and <span class="app_title">Permanent Licence #: </span><%=h application.licence.perm_number %>
+				<span class="app_title">Issue Date: </span><%=h time_date_2(application.licence.perm_issue_date) %>)
+			<% end -%>
+		<% end -%>
+	<% else -%>
+		(<span class="app_title">Application ref #: </span><%=h application.ref %> 
+		<span class="app_title">Application Date: </span><%=h time_date_2(application.app_date) %> *<span class="app_title">No licence issued.</span>)
+	<% end -%>
+	</p></td></tr>
+<% end -%>
+</table>
+
+
+<% if @company.children.size > 0 -%>
+<h3>Subsidiaries</h3>
+<% for company in @company.children -%>
+	<p class="app_element"><%= link_to company.name, :action => "company", :id => company %></p>
+<% end -%>
+<% end -%>
+</div></div></div></div>

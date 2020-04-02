@@ -1,0 +1,11 @@
+page[:errors].hide
+page[:perm_licence].replace_html :partial => "perm_licence"
+page[:edit1].replace_html ""
+page[:edit2].replace_html ""
+page[:edit3].replace_html ""
+page[:edit4].replace_html ""
+page[:edit5].replace_html ""
+page[:edit6].replace_html ""
+if @licence.temp_number.nil?
+	page[:temp_licence].replace_html ""
+end

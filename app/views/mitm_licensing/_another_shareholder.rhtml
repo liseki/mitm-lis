@@ -1,0 +1,6 @@
+<% i = 2 %>
+<% while i <= @num %>
+      <% holder = "holder" + i.to_s %>
+      <%= select 'company', holder, [["country", "0"]] + Country.find(:all).collect {|cty| [cty.name, cty.id]} %>
+      <% i += 1 %>
+<% end %>

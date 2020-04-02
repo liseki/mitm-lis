@@ -1,0 +1,1 @@
+page[:country_options].replace_html :partial => "country_options"

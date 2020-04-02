@@ -1,0 +1,34 @@
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="index">Pending Business Licence Applications</h2>
+</div></div></div></div>
+
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<div id="notice"><%= @flash[:notice] %></div>
+<% if @application_count == 0 -%>
+	<p>There are currently no pending applications.</p>
+<% else -%>
+	<h3><%= @application_count %> Application<% if @application_count != 1 -%>s<% end -%></h3>
+	<table id="applications" class="mitm">
+	<tr><th class="ref">ref #</th><th class="date">date</th><th class="line">business line</th><th class="company">company</th></tr>
+	<% @applications.each do |application| -%>
+	<tr><td class="ref"><%= link_to application.ref, :action => 'application', :id => application %></td>
+	<td class="date"><%=h time_date_2(application.app_date) %></td>
+	<td class="line"><%=h application.category.name %></td><td class="company"><%=h application.company.name %></td></tr>
+	<% end -%>
+	</table>
+<% end -%>
+
+<div class="list_links">
+<% for page in @application_pages -%>
+      <% if @application_pages.page_count > 1 -%>
+            <% if page.number != @page -%>
+                  <%= link_to(page.number, :action => "applications", :page => page.number) %>
+            <% else -%>
+                  <span id="current_page"><%= page.number %></span>
+            <% end -%>
+      <% end -%>
+<% end -%>
+</div>
+
+</div></div></div></div>

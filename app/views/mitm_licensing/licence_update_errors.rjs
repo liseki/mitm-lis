@@ -1,0 +1,2 @@
+page[:errors].replace_html :partial => "licence_update_errors"
+page[:errors].show

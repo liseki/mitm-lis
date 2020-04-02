@@ -1,0 +1,70 @@
+<div id="errors" style="display: none;"></div>
+
+
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="index">Trend Analysis</h2>
+
+<% form_tag :action => "search" do -%>
+<p class="search_forms">
+<%= submit_tag "Analyse" %> <%= select 'search', 'licence_type', Search::LICENCES %> 
+<label class="cat_label">issued between: </label>
+<%= select_day Date.today, :prefix => "range1" %> <%= select_month Date.today, :prefix => "range1", :use_short_month => true %> 
+<%= select_year Date.today, :start_year => 1990, :end_year => Date.today.year, :prefix => "range1" %>
+<label class="cat_label"> and: </label> 
+<%= select_day Date.today, :prefix => "range2" %> <%= select_month Date.today, :prefix => "range2", :use_short_month => true %> 
+<%= select_year Date.today, :start_year => 1990, :end_year => Date.today.year, :prefix => "range2" %>
+</p>
+
+<p class="search_forms" id="trend_sec2">
+<label class="cat_label">to a: </label> <%= select 'search', 'business_type', Search::BUSINESS_TYPE %>
+<label class="cat_label">with investment type: </label> <%= select 'search', 'investment_type', Search::INVESTMENT_TYPE %></p>
+
+<p class="search_forms" id="trend_sec3">
+<label class="cat_label">in sector: </label> 
+<%= select 'search', 'main_cat', [["All", 0]] + @main_categories.collect {|cat| [cat.name, cat.id]} %> </p>
+
+<p class="search_forms" id="trend_sec4">
+<label class="cat_label">in: <span id="region_search">
+</label><%= select 'search', 'region', [["Tanzania", 0]] + Region.find(:all).collect {|reg| [reg.name, reg.id]} %>
+<span id="trends_ind" style="display: none;"><%= image_tag 'loading2.gif' %></span>
+</p>
+
+<% end -%>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<div id="trends_results">
+<% form_tag :action => "report", :layout => "report", :main_cat => @main_cat, :search_option => @graph_num, :l_type => @licence_type, 
+		:b_type => @business_type, :i_type => @investment_type, :start_date => @range[0],  :end_date => @range[@range.size - 1], 
+    :region => @region do -%>
+<% if @graph_num == 3 -%>
+<%= select 'report', 'graph_option', Search::GRAPH_OPTION1 %>
+<% else -%>
+<%= select 'report', 'graph_option', Search::GRAPH_OPTION2 %>
+<% end -%>
+<%= submit_tag "generate report" %>
+<% end -%>
+
+<h3><% if @licence_type == "p" -%>Permanent <% else -%>Temporary <% end -%>Licences issued <%= date_range %> 
+<%= investment_type %> <%= business_type %> in <%= sector %> in <%= location %></h3>
+
+
+<%= image_tag session[:graph1] %>
+<% if @graph_num == 3 -%><%= image_tag session[:graph2] %><% end -%>
+
+<table id="trends" class="mitm">
+<tr><th class="cat_name">sector</th><th class="licences">licences issued</th></tr>
+<% for i in 1..@category_distribution.size - 1 -%>
+      <% if @category_distribution[i] != 0 -%>
+            <tr><td class="cat_name"><%=h Category.find(i).name %></td>
+            <td class="licences"><%=h @category_distribution[i] %></td></tr>
+      <% end -%>
+<% end -%>      
+
+<% if @main_cat == 0 -%>
+      <tr><td class="cat_name" id="total">TOTAL</td>
+      <td class="licences"><%=h @category_distribution[0] || 0 %></td></tr>
+<% end -%>
+</table>
+</div>
+</div></div></div></div>

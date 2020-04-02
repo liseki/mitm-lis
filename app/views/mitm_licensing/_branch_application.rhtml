@@ -1,0 +1,54 @@
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>1. Address and Business Premises</h3>
+<table class="mitm" id="app_form_location"><tr><td id="region">
+<label class="ap_label">Location: </label>
+<span id="select_region"><%= select 'address', 'region', [["region", "0"]] + Region.find(:all).collect {|reg| [reg.name, reg.id]} %>
+<%= observe_field(:address_region, :url => {:action => :setup_districts}, :with => "reg_id", 
+                              :loading => "new Element.show('indicator_sec2')", :complete => "new Element.hide('indicator_sec2')") %></span> 
+<span class="load_indicator" id="indicator_sec2" style="display: none;" ><%= image_tag 'loading.gif' %></span></td>
+<td id="district"><span id="select_district"></span><%= image_tag('loading.gif', :id => "indicator_sec2_2", :style => "display: none;") %></td>
+<td id="ward"><span id="select_ward"></span></td></tr></table>
+
+<p><label id="street">Street: </label><%= text_field 'address', 'street', :size => 29 %>
+<label id="box">P.O Box: </label><%= text_field 'address', 'box', :size => 22 %></p>
+<p><label id="block">Block: </label><%= text_field 'address', 'block', :size => 22 %>
+<label id="plot">Plot #: </label><%= text_field 'address', 'plot_no', :size => 22 %>
+<label id="house">House #: </label><%= text_field 'address', 'house_no', :size => 22 %></p>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>2. Line of Business</h3>
+<p><label class="ap_label">Business Category: </label>
+<%= select 'licence_application', 'main_category', [["main category", "0"]] + @main_categories.collect {|cat| [cat.name, cat.id]} %>
+<span class="load_indicator" id="indicator_sec4" style="display: none;"><%= image_tag 'loading.gif' %></span></p>
+<p id="sub_category1"></p><p id="sub_category2"></p><p id="sub_category3"></p><p id="sub_category4"></p><p id="sub_category5"></p>
+<p id="sub_category6"></p><p id="sub_category7"></p><p id="sub_category8"></p><p id="sub_category9"></p><p id="sub_category10"></p>
+<%= observe_field(:licence_application_main_category, :url => {:action => :show_sub_categories}, :with => "main_cat_id", 
+    :loading => "new Element.show('indicator_sec4')", :complete => "new Element.hide('indicator_sec4')") %>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>3. Certification</h3>
+<p><label id="app_date">Date of Application: </label><%= select_year Date.today.year, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR %> 
+<%= select_month Date.today %> <%= select_day Date.today %></p>
+<p><label>Signed by Applicant/Company Director </label><%= check_box 'licence_application', 'signed' %></p>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<h3>4. Accompanying Documentation</h3>
+<p><label id="cert_inc_or_reg">Certificate of Incorporation or Registration </label><%= check_box 'attachment', 'cert_inc_or_reg' %>
+<label id="memorandum">Memorandum and Articles of Association </label><%= check_box 'attachment', 'memorandum' %></p>
+<p><label>Proof of Tanzanian Citizenship or Residency </label><%= check_box 'attachment', 'tz_proof' %>
+<label id="att_powers">Powers of Attorney </label><%= check_box 'attachment', 'att_powers' %></p>
+<p><label id="premises">Proof of Business Premises </label><%= check_box 'attachment', 'premises' %>
+<label id="tin_cert">TIN Certificate </label><%= check_box 'attachment', 'tin_cert' %></p>
+
+<h3>Specific Requirements</h3>
+<p><label id="cal">Customs Agency Licence (CAL) </label><%= check_box 'attachment', 'cal' %>
+<label id="tal">Tourism Agency Licence (TAL) </label><%= check_box 'attachment', 'tal' %></p>
+<p><label id="prof_cert">Professional Certificates </label><%= check_box 'attachment', 'prof_cert' %>
+<label id="air_sea_worth">Air/Sea Worthiness Certificate </label><%= check_box 'attachment', 'air_sea_worth' %></p>
+
+<h3>Other</h3>
+<p><%= text_field 'attachment', 'other', :size => 100 %> <span class="comma_note">(use & for separation)</span></p>
+</div></div></div></div>

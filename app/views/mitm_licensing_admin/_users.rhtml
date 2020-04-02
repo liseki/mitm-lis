@@ -1,0 +1,9 @@
+<table id="users" class="mitm">
+<tr><th class="id">#</th><th class="name">name</th><th class="since">since</th><th class="remove"></th></tr>
+<% for i in 0..@users.size - 1 -%>
+<tr><td class="id"><%=h i + 1 %></td><td class="name"><%=h @users[i].name %></td>
+<td class="since"><%=h time_date_2(@users[i].created_at) %></td>
+<td class="remove"><% if @users[i].id != session[:mitm_user_id] -%>
+<%= link_to_remote(image_tag('remove.gif'), :url => {:action => "destroy_user", :id => @users[i]}) %> <% end -%></td></tr>
+<% end -%>
+</table>

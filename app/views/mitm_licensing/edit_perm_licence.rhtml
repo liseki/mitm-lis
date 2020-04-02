@@ -1,0 +1,27 @@
+<div class="category_header4"><div class="category_header3">
+<div class="category_header2"><div class="category_header1">
+<h2 class="title" id="new_application">Edit Permanent Business Licence #<%= @licence.perm_number %></h2>
+</div></div></div></div>
+
+<div id="errors" style="display: none;"></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<% form_remote_tag :url => {:action => "update_perm_licence", :id => params[:id]}, 
+			:loading => "new Element.show('temp_indicator')", :complete => "new Element.hide('temp_indicator')" do -%>
+	
+  <p><label class="app_title">new licence #: </label><%= text_field 'licence', 'perm_number', :size => 15 %> 
+  <label class="app_title">confirm licence number#: </label><%= text_field 'licence', 'perm_number_confirmation', :size => 15 %> 
+  <label class="app_title">Date: </label> 
+	<%= select_year @licence.perm_issue_date.year, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR, :prefix => "perm" %> 
+	<%= select_month @licence.perm_issue_date.month, :prefix => "perm" %> 
+  <%= select_day @licence.perm_issue_date.day, :prefix => "perm" %></p>
+	
+  <p><label class="app_title">root password: </label><%= password_field 'root', 'password', :size => 15 %></p>
+  
+	<div id="edit_licence">
+    <%= submit_tag 'update' %> 
+    <span id="temp_indicator" style="display: none;"><%= image_tag 'loading.gif' %></span>
+    <span id="cancel_bt"><%= link_to(image_tag('cancel.gif'), :action => "application", :id => @licence.licence_application.id) %></span>
+</div>
+<% end -%>
+</div></div></div></div>

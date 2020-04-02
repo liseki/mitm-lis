@@ -1,0 +1,95 @@
+<% for application in @applications -%>
+	<% company = application.company -%>
+	
+	<div class="search_result">
+	<h2 class="title">Business Licence Application ref #<%= application.ref %></h2>
+	
+	<div id="prn_licence">
+	<% if application.subsidiary -%>
+	<table class="app" id="prn_licence"><tr>
+	<td><p class="app_element"><span class="app_title">Subsidiary of: </span><%= company.parent.name %> </p></td>
+	</tr></table>
+	<% end -%>
+	</div>
+
+	<div id="temp_licence">
+	<% if application.processed && !application.temp_number.nil? -%>
+	<table class="app" id="temp_licence"><tr>
+	<td><p class="app_element"><span class="app_title">Temporary Licence #: </span><%=h application.temp_number %> </p></td>
+	<td><p class="app_element"><span class="app_title">Issued: </span><%=h time_date_7(application.temp_issue_date) %></p></td>
+	</tr></table>
+  <% else -%>
+  <table class="app" id="temp_licence"><tr><td><p class="app_element">No temporary licence issued.</p></td></tr></table>
+	<% end -%>
+	</div>
+
+	<div id="perm_licence">
+	<% if application.processed && application.licence_type == "p" -%>
+	<table class="app" id="perm_licence"><tr>
+	<td><p class="app_element"><span class="app_title">Permanent Licence #: </span><%=h application.perm_number %> </p></td>
+	<td><p class="app_element"><span class="app_title">Issued: </span><%=h time_date_7(application.perm_issue_date) %></p></td>
+	</tr></table>
+  <% else -%>
+ <table class="app" id="temp_licence"><tr><td><p class="app_element">No permanent licence issued.</p></td></tr></table>
+	<% end -%>
+	</div>
+
+	<h3>1. Applicant </h3>
+	<table class="app" id="app_sec1"><tr>
+	<td><p class="app_element"><span class="app_title">Type: </span><%=h company.business %></p></td>
+	<td><% if application.business_type != "ind" -%>
+	<p class="app_element"><span class="app_title"><% if application.business_type == "ltd" -%>Certificate of Inc #<% else %> Registration #<% end -%>: </span><%=h application.inc_or_reg_no %></p>
+	<% end -%></td>
+	<td><p class="app_element"><span class="app_title">TIN: </span><%=h application.tin_number.insert(-7, '-').insert(-4, '-') %></p></td></tr></table>
+	<table class="app"><tr>
+	<td><p class="app_element"><span class="app_title">Investment: </span><%=h company.investment %> (<%= show_shareholders(company) %>)</p></td></tr>
+	<tr><td><p class="app_element"><span class="app_title">Name: </span><%=h application.company_name %></p></td></tr>
+	<tr><td><p class="app_element"><span class="app_title">Director: </span><%=h company.show_directors %></p></td></tr>
+	</table>
+
+	<h3 class="app">2. Address and Business Premises</h3>
+	<table class="app" id="app_sec2"><tr>
+	<td><p class="app_element"><span class="app_title">Ward: </span><%=h application.ward_name %></p></td>
+	<td><p class="app_element"><span class="app_title">District: </span><%=h application.district_name %></p></td>
+	<td><p class="app_element"><span class="app_title">Region: </span><%=h application.region_name %></p></td></tr>
+	<tr><td><p class="app_element"><span class="app_title">P.O.Box: </span><%=h application.p_o_box %></p></td>
+	<td><p class="app_element"><span class="app_title">Street: </span><%=h application.street %></p></td></tr>
+	<tr><td><p class="app_element"><span class="app_title">Block: </span><%=h application.block %></p></td>
+	<td><p class="app_element"><span class="app_title">Plot #: </span><%=h application.plot_no %></p></td>
+	<td><p class="app_element"><span class="app_title">House #: </span><%=h application.house_no %></p></td>
+	</tr></table>
+
+	<h3 class="app">3. Communication</h3>
+	<table class="app" id="app_sec3"><tr>
+	<td><p class="app_element"><span class="app_title">Telephone: </span><%=h application.telephone %></p></td>
+	<td><p class="app_element"><span class="app_title">Fax: </span><%=h application.fax %></p></td>
+	<td><p class="app_element"><span class="app_title">Email: </span><%=h application.email %></p></td>
+	</tr></table>
+
+	<h3 class="app">4. Line of Business</h3>
+	<table class="app" id="app_sec4"><tr>
+	<td><p class="app_element"><%=h application.category_name %></p></td>
+	</tr></table>
+
+	<h3 class="app">5. Certification</h3>
+	<table class="app" id="app_sec5"><tr>
+	<td><p class="app_element"><span class="app_title">Date: </span><%=h time_date_2(application.app_date) %></p></td>
+	<td><p class="app_element"><span class="app_title">Signed: </span><%=h application.signature %></p></td>
+	</tr></table>
+
+	<h3 class="app">6. Accompanying Documentation</h3>
+	<table class="app" id="app_sec6">
+	<% if application.cert_inc_or_reg == "t"-%><tr><td><p class="app_element">Certificate of Incorporation or Registration</p></td></tr><% end -%>
+	<% if application.memorandum == "t"-%><tr><td><p class="app_element">Memorandum and Articles of Association</p></td></tr><% end -%>
+	<% if application.tz_proof == "t"-%><tr><td><p class="app_element">Proof of Tanzanian Citizenship or Residency</p></td></tr><% end -%>
+	<% if application.att_powers == "t"-%><tr><td><p class="app_element">Powers of Attorney</p></td></tr><% end -%>
+	<% if application.premises == "t"-%><tr><td><p class="app_element">Proof of Business Premises</p></td></tr><% end -%>
+	<% if application.tin_cert == "t"-%><tr><td><p class="app_element">TIN Certificate</p></td></tr><% end -%>
+	<% if application.cal == "t"-%><tr><td><p class="app_element">Customs Agency Licence (CAL)</p></td></tr><% end -%>
+	<% if application.tal == "t"-%><tr><td><p class="app_element">Tourism Agency Licence (TAL)</p></td></tr><% end -%>
+	<% if application.prof_cert == "t"-%><tr><td><p class="app_element">Professional Certificates</p></td></tr><% end -%>
+	<% if application.air_sea_worth == "t"-%><tr><td><p class="app_element">Air/Sea Worthiness Certificate</p></td></tr><% end -%>
+	<% if application.other != "" -%><tr><td><p class="app_element"><span class="app_title">Other: </span><%= application.other %></p></td></tr><% end -%>
+	</table>
+	</div>
+<% end -%>

@@ -1,0 +1,8 @@
+<div class="error_msg_title">The following error prevented the renaming of a category!</div>
+<% if @category.errors.size > 0 %>
+<ul><% @category.errors.each do |attr, msg| %>
+	<% if msg == "already exists." %><li><%= @category.name %> <%= msg %></li>
+	<% else %><li><%= @model_title %> name <%= msg %></li><% end %>
+<% end %>
+</ul>
+<% end %>

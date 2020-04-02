@@ -1,0 +1,2 @@
+module MitmLicensingLoginHelper
+end

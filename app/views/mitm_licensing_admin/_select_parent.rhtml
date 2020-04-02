@@ -1,0 +1,1 @@
+<%= select 'category', 'parent_id', Category.find(:all, :conditions => "parent_id > 0", :order => "name ASC").collect {|cat| [cat.name, cat.id]}, {:include_blank => true} %>

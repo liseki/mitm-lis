@@ -1,0 +1,2 @@
+page[:ward_search].replace_html ""
+page[:district_search].replace_html ""

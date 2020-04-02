@@ -1,0 +1,42 @@
+<% if @option == 1 -%>
+<% form_remote_tag :url => {:action => "add_category"}, :loading => "new Element.show('cat_sec2')", 
+                                                :complete => "new Element.hide('cat_sec2')" do -%>
+<p id="new_category" class="category_forms"><label id="cat" class="cat_label">New Category:</label> 
+<%= submit_tag "Add" %> <%= text_field 'category', 'name', :size => 55 %> as a main category. 
+<span id="cat_sec2" style="display:none;"><%= image_tag 'loading2.gif' %></span></p><% end -%>
+
+<% elsif @option == 2 -%>
+<% form_remote_tag(:url => {:action => "add_sub_category"}, :html => {:id => 'sub-cat_form'}, 
+                                    :loading => "new Element.show('cat_sec3')", :complete => "new Element.hide('cat_sec3')") do -%>
+<p id="new_sub_category" class="category_forms"><label id="sub_cat" class="cat_label">New Sub-Category:</label> 
+<%= submit_tag "Add" %> <%= text_field 'category', 'name', :size => 55 %> to 
+<span id="select_parent"><%= select 'category', 'parent_id', Category.find(:all, :conditions => "parent_id > 0", :order => "name ASC").collect {|cat| [cat.name, cat.id]}, 
+	{:include_blank => true} %></span> 
+<span id="cat_sec3" style="display:none;"><%= image_tag 'loading2.gif' %></span></p><% end -%>
+
+<% elsif @option == 3 -%>
+<% form_remote_tag(:url => {:action => "rename_category"}, :loading => "new Element.show('cat_sec5')", 
+                                                :complete => "new Element.hide('cat_sec5')") do -%>
+<p id="rename_category" class="category_forms"><label id="ren_cat" class="cat_label">Rename Category:</label> <%= submit_tag "Ren" %>
+<span id="select_category"><%= select 'category', 'category_id', Category.find(:all, :conditions => "parent_id > 0", :order => "name ASC").collect {|cat| [cat.name, cat.id]}, 
+	{:include_blank => true} %></span> as <span id="cat_rename"><%= text_field 'category', 'name', :size => 55 %></span> 
+<span id="cat_sec5" style="display:none;"><%= image_tag 'loading2.gif' %></span></p><% end -%>
+
+<% elsif @option == 4 -%>
+<% form_remote_tag(:url => {:action => "move_category"}, :loading => "new Element.show('cat_sec6')", 
+                                                :complete => "new Element.hide('cat_sec6')") do -%>
+<p id="move_category" class="category_forms"><label id="mov_cat" class="cat_label">Move Category:</label> <%= submit_tag "Mov" %>
+<span id="select_category"><%= select 'category', 'category_id', Category.find(:all, :conditions => "parent_id > 0", :order => "name ASC").collect {|cat| [cat.name, cat.id]}, 
+	{:include_blank => true} %></span> to <span id="select_parent"><%= select 'category', 'parent_id', [["Main", @root.id]] + Category.find(:all, :conditions => "parent_id > 0", :order => "name ASC").collect {|cat| [cat.name, cat.id]}, 
+	{:include_blank => true} %></span> 
+<span id="cat_sec6" style="display:none;"><%= image_tag 'loading2.gif' %></span></p><% end -%>
+
+<% elsif @option == 5 -%>
+<% form_remote_tag(:url => {:action => "delete_category"}, :loading => "new Element.show('cat_sec4')", 
+                                                :complete => "new Element.hide('cat_sec4')") do -%>
+<p id="delete_category" class="category_forms"><label id="del_cat" class="cat_label">Delete Category:</label> <%= submit_tag "Del" %>
+<span id="select_category"><%= select 'category', 'category_id', Category.find(:all, :conditions => "parent_id > 0", :order => "name ASC").collect {|cat| [cat.name, cat.id]}, 
+	{:include_blank => true} %></span> 
+<span id="cat_sec4" style="display:none;"><%= image_tag 'loading2.gif' %></span></p><% end -%>
+
+<% end -%>

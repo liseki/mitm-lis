@@ -1,0 +1,8 @@
+<table class="app" id="perm_licence_table"><tr>
+	<td><p class="app_element"><span class="app_title">Permanent Licence #: </span><%=h @application.licence.perm_number %> </p></td>
+	<td><p class="app_element"><span class="app_title">Issued: </span><%=h time_date_2(@application.licence.perm_issue_date) %>
+    <% if session[:mitm_user_type].to_i == 1 -%>
+      <%= link_to(image_tag('edit.gif'), :action => "edit_perm_licence", :id => @application) %>
+    <% end -%></p>
+  </td>
+	</tr></table>

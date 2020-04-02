@@ -1,0 +1,2 @@
+page[:errors].replace_html :partial => "no_temp_licence"
+page[:errors].show

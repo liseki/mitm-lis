@@ -1,0 +1,2 @@
+page[:select_ward].replace_html ""
+page[:select_district].replace_html ""

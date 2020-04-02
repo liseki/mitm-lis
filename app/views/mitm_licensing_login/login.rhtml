@@ -1,0 +1,19 @@
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="new_user">LOGIN</h2>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+
+<div id="notice"><%= flash[:notice] %></div>
+<div id="login">
+<% form_remote_tag  :url => {:action => "attempt_login"}, :loading => "new Element.show('login_ind')", 
+                  :complete => "new Element.hide('login_ind')" do -%>
+<p><label for="user_email">Email address</label><br/>
+<%= text_field 'user', 'email', :size => 30 %></p>
+<p id="login_2"><label for="user_password">Password</label><br/>
+<%= password_field 'user', 'password', :size => 30 %></p>
+<p><%= submit_tag "log in" %> <span id="login_ind" style="display:none;"><%= image_tag 'loading.gif' %></span></p>
+<% end -%>
+</div>
+
+</div></div></div></div>

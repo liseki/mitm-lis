@@ -1,0 +1,1 @@
+page[:other_shareholders].replace_html :partial => "another_shareholder"

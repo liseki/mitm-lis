@@ -1,0 +1,19 @@
+<table id="applications3" class="mitm">
+	<tr><th class="date"><%if @app_lic == "a"-%>applied<%else-%>issued<%end-%></th>
+  <th class="line">business line</th><th class="company">company</th>
+	<th class="investment">investment</th><th class="location">location</th></tr>
+	<% for application in @applications -%>
+		<tr>
+		<td class="date">
+      <%if @app_lic == "a"-%><%=h time_date_2(application.app_date) %>
+      <%elsif @app_lic == "t"-%><%=h time_date_7(application.temp_issue_date) %>
+      <%elsif @app_lic == "p"-%><%=h time_date_7(application.perm_issue_date) %><%end-%></td>
+		<td class="line"><%=h application.category_name %></td>
+		<td class="company"><%=h application.company_name %></td>
+		<td class="investment">
+			<% if application.investment_type == "loc" -%>Local
+			<% elsif application.investment_type == "for" -%>Foreign
+			<% else -%> Joint Venture <% end -%></td>
+    <td class="location"><%= application.district_name%>, <%= application.region_name %></td></tr>
+	<% end -%>
+	</table>

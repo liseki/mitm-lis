@@ -1,0 +1,5 @@
+for i in 1..10
+      page["sub_category#{i}"].replace_html ""
+      page["sub_category#{i}"].hide
+end
+page["main_category"].replace_html :partial => "updated_categories"

@@ -1,0 +1,4 @@
+for i in @num..10
+      page["sub_category#{i}"].replace_html ""
+      page["sub_category#{i}"].hide
+end

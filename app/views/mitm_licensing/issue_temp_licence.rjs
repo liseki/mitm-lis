@@ -1,0 +1,3 @@
+page[:errors].hide
+page[:app_delete_bt].hide
+page[:temp_licence].replace_html :partial => "temp_licence"

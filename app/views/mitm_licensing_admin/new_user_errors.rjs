@@ -1,0 +1,2 @@
+page[:errors].show
+page[:errors].replace_html :partial => "new_user_errors"

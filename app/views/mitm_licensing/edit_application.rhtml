@@ -1,0 +1,22 @@
+<div class="category_header4"><div class="category_header3">
+<div class="category_header2"><div class="category_header1">
+<h2 class="title" id="new_application">Edit Business Licence Application ref #<%= @licence_application.ref %></h2>
+</div></div></div></div>
+
+<div id="errors" style="display: none;"></div>
+
+<% form_remote_tag :url => {:action => 'update_application', :id => @licence_application, :sec => @section}, 
+          :loading => "new Element.show('load_new_app')", :complete => "new Element.hide('load_new_app')" do -%>
+
+<%= render_partial "edit_application_form" %>
+
+<div id="new_app_submit4" class="category_header4"><div class="category_header3">
+<div class="category_header2"><div id="new_app_submit1" class="category_header1">
+<p id="new_app_sub_prop">1</p>
+<%= submit_tag 'update', {:id => "submit_new_app_bt"} %>
+<span id="load_new_app" style="display:none;"><%= image_tag 'loading2.gif' %></span>
+<% end -%>
+<% form_remote_tag :url => {:action => "cancel_edit", :id => @licence_application} do -%>
+<%= image_submit_tag "cancel.gif", {:id => "cancel_edit_bt"} %>
+<% end -%>
+</div></div></div></div>

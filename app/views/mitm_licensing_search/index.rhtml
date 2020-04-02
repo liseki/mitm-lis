@@ -1,0 +1,29 @@
+<div id="errors" style="display: none;"></div>
+
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="index">Search</h2>
+
+<div id="search_menu">
+<%= link_to_remote(image_tag('ref_num.gif'), :update => "search_func", :url => {:action => "search_function", :option => 1}, 
+:loading => "new Element.show('search_menu_ind')", :complete => "new Element.hide('search_menu_ind')") %>
+<%= link_to_remote(image_tag('cmp_details.gif'), :update => "search_func", :url => {:action => "search_function", :option => 2}, 
+:loading => "new Element.show('search_menu_ind')", :complete => "new Element.hide('search_menu_ind')") %>
+<%= link_to_remote(image_tag('investment.gif'), :update => "search_func", :url => {:action => "search_function", :option => 3}, 
+:loading => "new Element.show('search_menu_ind')", :complete => "new Element.hide('search_menu_ind')") %>
+<%= link_to_remote(image_tag('advanced.gif'), :update => "search_func", :url => {:action => "search_function", :option => 4}, 
+:loading => "new Element.show('search_menu_ind')", :complete => "new Element.hide('search_menu_ind')") %>
+<%= image_tag('loading2.gif', {:id => 'search_menu_ind', :style => "display:none"}) %></div>
+
+<% form_remote_tag :url => {:action => "reset_search"} do -%>
+<%= submit_tag "reset", {:id => "reset_search_bt"} %> 
+<% end -%>
+
+<div id="search_func"></div>
+
+</div></div></div></div>
+
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<div id="report_link"></div>
+<div id="search_results"><h3>Search Results</h3>Waiting for search.</div>
+</div></div></div></div>

@@ -1,0 +1,28 @@
+<span id="summary_options"></span>
+<% if @option == 1 -%>
+	<% form_tag :action => "search_results_report", :option => @option, :app_lic => @app_lic, :id => @id do -%>
+			<%= select :report, :search_report, Search::SEARCH_REPORT -%> 
+			<%= submit_tag 'generate report' %>
+	<% end -%>
+
+<% elsif @option == 2 -%>
+	<% form_tag :action => "search_results_report", :option => @option, :element => @element, :app_lic => @app_lic, 
+		:input => @input do -%>
+			<%= select :report, :search_report, Search::SEARCH_REPORT -%> 
+			<%= submit_tag 'generate report' %>
+	<% end -%>
+  
+<% elsif @option == 3 -%>
+	<% form_tag :action => "search_results_report", :option => @option, 
+            :app_lic => @app_lic, :start_date => @date1, :end_date => @date2, :b_type => @b, :i_type => @i, :cat => @cat, :reg => @reg, :dis => @dis do -%>
+	<%= select :report, :search_report, Search::SEARCH_REPORT -%> 
+	<%= submit_tag 'generate report' %>               
+  <% end -%>
+  
+<% elsif @option == 4 -%>
+	<% form_tag :action => "search_results_report", :option => @option, 
+            :app_lic => @app_lic, :start_date => @date1, :end_date => @date2, :cat => @cat, :reg => @reg, :dis => @dis, :cty => @cty, :i_type => @i do -%>
+	<%= select :report, :search_report, Search::SEARCH_REPORT -%> 
+	<%= submit_tag 'generate report' %>                                    
+  <% end -%>
+<% end -%>

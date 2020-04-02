@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MITM Licence Information System</title>
+<%= stylesheet_link_tag "mitm", :media => "all" %>
+<%= stylesheet_link_tag "mitm_local", :media => "all" %>
+<%= javascript_include_tag :defaults %>
+</head>
+
+<body>
+<div id="main4"><div id="main3"><div id="main2"><div id="main1">
+<div id="header4"><div id="header3"><div id="header2"><div id="header1"><%= image_tag "header.gif" %></div></div></div></div>
+<div id="nav">
+<% if session[:mitm_user_type].to_i >= 0 -%>
+<span class="nav"><%= link_to(image_tag('new_app.gif'), :controller => "mitm_licensing", :action => "check_company") %></span>
+<% end -%>
+<span class="nav"><%= link_to(image_tag('apps.gif'), :controller => "mitm_licensing", :action => "applications") %></span>
+<span class="nav"><%= link_to(image_tag('pending_licences.gif'), :controller => "mitm_licensing", :action => "pending_licences") %></span>
+<span class="nav"><%= link_to(image_tag('categories.gif'), :controller => "mitm_licensing_admin", :action => "categories") %></span>
+<span class="nav"><%= link_to(image_tag('search.gif'), :controller => "mitm_licensing_search", :action => "index") %></span>
+<span class="nav"><%= link_to(image_tag('trends.gif'), :controller => "mitm_licensing_trends", :action => "index") %></span>
+<span class="nav"><%= link_to(image_tag('users.gif'), :controller => "mitm_licensing_admin", :action => "users") %></span>
+<span class="nav" id="logout"><%= link_to(image_tag('log_out.gif'), :controller => "mitm_licensing_login", :action => "logout") %></span>
+</div>
+<div id="content"><%= @content_for_layout %></div>
+</div></div></div></div>
+</body></html>

@@ -1,0 +1,6 @@
+page["sub_category#{@num}"].replace_html :partial => "sub_categories"
+page["sub_category#{@num}"].show
+for i in @num+1..10
+	page["sub_category#{i}"].replace_html ""
+  page["sub_category#{i}"].hide
+end

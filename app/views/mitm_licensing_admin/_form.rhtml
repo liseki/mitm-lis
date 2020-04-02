@@ -1,0 +1,21 @@
+<table id="new_user">
+<tr><td><p><label for="user_first_name">First name</label><br/>
+<%= text_field 'user', 'first_name', :size => 30 %></p></td>
+
+<td class="new_user_co2"><p><label for="user_surname">Surname</label><br/>
+<%= text_field 'user', 'surname', :size => 30 %></p></td></tr>
+
+<tr><td><p><label for="user_email">Email address</label><br/>
+<%= text_field 'user', 'email', :size => 30 %></p></td>
+
+<td class="new_user_co2"><p><label for="user_email_confirmation">Confirm email address</label><br/>
+<%= text_field 'user', 'email_confirmation', :size => 30 %></p></td></tr>
+
+<tr><td><p><label for="user_password">Password</label><br/>
+<%= password_field 'user', 'password', :size => 30 %></p></td>
+
+<td class="new_user_co2"><p><label for="user_password_confirmation">Confirm password</label><br/>
+<%= password_field 'user', 'password_confirmation', :size => 30 %></p></td></tr>
+
+<tr><td><label for="user_user_type">User type</label><br/>
+<%= select 'user', 'user_type', User::USER_TYPE  %></td></tr>

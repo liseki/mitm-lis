@@ -1,0 +1,8 @@
+<div class="error_msg_title">There was an error with your search input!</div>
+<ul>
+<% if @id.scan(/|/).size > 0 -%>
+      <li>One or more of the <%if @app_lic == "a" -%>Application Reference #s<%else-%>Licence numbers<%-end-%> is invalid.</li>
+<%else-%>
+	<li>Invalid <% if @app_lic == "a" -%>Application reference <% else -%>Licence <% end -%>number. </li>
+<%end-%>
+</ul>

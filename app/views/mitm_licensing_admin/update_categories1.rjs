@@ -1,0 +1,4 @@
+page['errors'].hide
+page['category_list'].replace_html :partial => "categories"
+page['category_count'].replace_html :partial => "category_count"
+page.select('form').each {|f| f.reset}

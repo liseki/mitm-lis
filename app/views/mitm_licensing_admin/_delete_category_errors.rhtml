@@ -1,0 +1,9 @@
+<div class="error_msg_title">The following error<%if @error_count > 1%>s<%end%> 
+prevented the deletion of a category!</div>
+<% if @error_count > 0 %>
+<ul>
+	<% if @category.categories_count > 0 %><li><%= @category.name %> has one or more sub-categories.</li><%end%>
+	<% if @category.licence_applications_count > 0 %><li><%= @category.name %> currently has one or more applications.</li><%end%>
+	<% if @category.licences_count > 0 %><li><%= @category.name %> currently has one or more licences.</li><%end%>
+</ul>
+<% end %>

@@ -1,0 +1,9 @@
+<div class="error_msg_title">The following error<%if @category.errors.size > 1%>s<%end%> 
+prevented the creation of a new <%=@model_title %>!</div>
+<% if(@category.errors && !@category.errors.empty?) %>
+<ul><% @category.errors.each do |attr, msg| %>
+	<% if msg == "already exists." %><li><%= @category.name %> <%= msg %></li>
+	<% else %><li><%= @model_title %> name <%= msg %></li><% end %>
+<% end %>
+</ul>
+<% end %>

@@ -1,0 +1,111 @@
+<% if @option == 1 -%>
+	<p class="search_forms">
+	<% form_remote_tag :url => {:action => "search", :option => 1}, :loading => "new Element.show('s1_ind')", 
+						    :complete => "new Element.hide('s1_ind')"  do -%>
+	<%= submit_tag "Find" %> <%= select 'search', 'lic_or_app1',  Search::ITEM0 %> 
+	<span id="application_ref"><label class="cat_label">with reference/licence no.: </label></span>
+	<%= text_field 'search', 'input1', :size => 40 %><span id="s1_ind" style="display: none;"> <%= image_tag 'loading2.gif' %></span>
+	<% end -%></p>
+
+
+<% elsif @option == 2%>
+	<p class="search_forms">
+	<% form_remote_tag :url => {:action => "search", :option => 2}, :loading => "new Element.show('s2_ind')", 
+																		:complete => "new Element.hide('s2_ind')"  do -%>
+	<%= submit_tag "Find" %> <%= select 'search', 'lic_or_app2',  [["Unprocessed Applications", "a"]] + Search::LICENCES_LONG%> <label class="cat_label">with: </label>
+	<%= select 'search', 'element',  Search::ELEMENTS %> <%= text_field 'search', 'input2', :size => 45 %> 
+	<span id="s2_ind" style="display: none;"><%= image_tag 'loading2.gif' %></span>
+	<% end -%></p>
+	
+	
+<% elsif @option == 3 %>
+	<p class="search_forms">
+	<% form_remote_tag :url => {:action => "search", :option => 4}, :loading => "new Element.show('s3_ind')", 
+																		:complete => "new Element.hide('s3_ind')"  do -%>
+	<%= submit_tag "Find" %> <%= select 'search', 'lic_or_app3',  [["Unprocessed Applications", "a"]] + Search::LICENCES_LONG %></p>
+  
+  <p class="search_forms" id="search_sec19">
+	<label class="cat_label">made/issued between: </label>
+	<%= select_day Date.today, :prefix => "range1" %> <%= select_month Date.today, :prefix => "range1", :use_short_month => true %> 
+	<%= select_year Date.today, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR, :prefix => "range1" %>
+	<label class="cat_label"> and: </label> 
+	<%= select_day Date.today, :prefix => "range2" %> <%= select_month Date.today, :prefix => "range2", :use_short_month => true %> 
+	<%= select_year Date.today, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR, :prefix => "range2" %></p>
+
+	<p class="search_forms" id="search_sec6">
+  <label class="cat_label">by/to: </label> <span id="country_options"><%= select 'search', 'investment_type', Search::FOREIGN_TYPE %></span> 
+  <%= select 'search', 'country', Country.find(:all).collect {|cty| [cty.name, cty.id]} %>
+  <%= observe_field(:search_country, :url => {:action => "change_country_options"}, :with => "country_id", 
+                                :loading => "new Element.show('cty_opt_ind')", :complete => "new Element.hide('cty_opt_ind')") %>
+	<label class="cat_label"> companies</label> <%= image_tag('loading2.gif', {:id => "cty_opt_ind", :style => "display:none"}) %></p>
+
+	<p class="search_forms" id="search_sec7"><label class="cat_label" >in Sector: </label>
+	<%= select 'licence_application', 'main_category', [["All", 0]] + @main_categories.collect {|cat| [cat.name, cat.id]} %>
+	<span class="load_indicator" id="indicator_sec4" style="display: none;"><%= image_tag 'loading2.gif' %></span>
+	<%= observe_field(:licence_application_main_category, :url => {:controller => "mitm_licensing_search", :action => :show_sub_categories}, 
+		  :with => "main_cat_id", :loading => "new Element.show('indicator_sec4')", :complete => "new Element.hide('indicator_sec4')") %></p>
+	<p id="sub_category1" class="sec9" style="display:none"></p><p id="sub_category2" class="sec9" style="display:none"></p>
+	<p id="sub_category3" class="sec9" style="display:none"></p><p id="sub_category4" class="sec9" style="display:none"></p>
+	<p id="sub_category5" class="sec9" style="display:none"></p><p id="sub_category6" class="sec9" style="display:none"></p>
+	<p id="sub_category7" class="sec9" style="display:none"></p><p id="sub_category8" class="sec9" style="display:none"></p>
+	<p id="sub_category9" class="sec9" style="display:none"></p><p id="sub_category10" class="sec9" style="display:none"></p>
+
+
+	<p class="search_forms" id="search_sec8">
+	<label class="cat_label">in: </label>
+	<span id="select_region"><%= select 'address', 'region', [["Tanzania", 0]] + Region.find(:all).collect {|reg| [reg.name, reg.id]} %>
+	<%= observe_field(:address_region, :url => {:controller => "mitm_licensing_search", :action => :setup_districts}, :with => "reg_id", 
+						:loading => "new Element.show('indicator_sec2')", :complete => "new Element.hide('indicator_sec2')") %></span> 
+	<span class="load_indicator" id="indicator_sec2" style="display: none;" ><%= image_tag 'loading2.gif' %></span></td>
+
+	<span id="select_district"></span><%= image_tag('loading2.gif', :id => "indicator_sec2_2", :style => "display: none;") %>
+	<span id="select_ward"></span>
+	<span id="s3_ind" style="display: none;"><%= image_tag 'loading2.gif' %></span>
+	</p>
+	<% end -%>
+
+
+<% elsif @option == 4 %>
+	<p class="search_forms">
+	<% form_remote_tag :url => {:action => "search", :option => 3}, :loading => "new Element.show('s3_ind')", 
+																		:complete => "new Element.hide('s3_ind')"  do -%>
+	<%= submit_tag "Find" %> <%= select 'search', 'lic_or_app3',  [["Unprocessed Applications", "a"]] + Search::LICENCES_LONG %></p>
+  
+  <p class="search_forms" id="search_sec31">
+	<label class="cat_label">made/issued between: </label>
+	<%= select_day Date.today, :prefix => "range1" %> <%= select_month Date.today, :prefix => "range1", :use_short_month => true %> 
+	<%= select_year Date.today, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR, :prefix => "range1" %>
+	<label class="cat_label"> and: </label> 
+	<%= select_day Date.today, :prefix => "range2" %> <%= select_month Date.today, :prefix => "range2", :use_short_month => true %> 
+	<%= select_year Date.today, :start_year => Search::START_YEAR, :end_year => Search::END_YEAR, :prefix => "range2" %></p>
+
+	<p class="search_forms" id="search_sec6">
+	<label class="cat_label">by or to a: </label> <%= select 'search', 'business_type', Search::BUSINESS_TYPE %>
+	<label class="cat_label">with investment type: </label> <%= select 'search', 'investment_type', Search::INVESTMENT_TYPE %></p>
+
+	<p class="search_forms" id="search_sec7"><label class="cat_label" >in Sector: </label>
+	<%= select 'licence_application', 'main_category', [["All", 0]] + @main_categories.collect {|cat| [cat.name, cat.id]} %>
+	<span class="load_indicator" id="indicator_sec4" style="display: none;"><%= image_tag 'loading2.gif' %></span>
+	<%= observe_field(:licence_application_main_category, :url => {:controller => "mitm_licensing_search", :action => :show_sub_categories}, 
+		  :with => "main_cat_id", :loading => "new Element.show('indicator_sec4')", :complete => "new Element.hide('indicator_sec4')") %></p>
+	<p id="sub_category1" class="sec9" style="display:none"></p><p id="sub_category2" class="sec9" style="display:none"></p>
+	<p id="sub_category3" class="sec9" style="display:none"></p><p id="sub_category4" class="sec9" style="display:none"></p>
+	<p id="sub_category5" class="sec9" style="display:none"></p><p id="sub_category6" class="sec9" style="display:none"></p>
+	<p id="sub_category7" class="sec9" style="display:none"></p><p id="sub_category8" class="sec9" style="display:none"></p>
+	<p id="sub_category9" class="sec9" style="display:none"></p><p id="sub_category10" class="sec9" style="display:none"></p>
+
+
+	<p class="search_forms" id="search_sec8">
+	<label class="cat_label">in: </label>
+	<span id="select_region"><%= select 'address', 'region', [["Tanzania", 0]] + Region.find(:all).collect {|reg| [reg.name, reg.id]} %>
+	<%= observe_field(:address_region, :url => {:controller => "mitm_licensing_search", :action => :setup_districts}, :with => "reg_id", 
+						:loading => "new Element.show('indicator_sec2')", :complete => "new Element.hide('indicator_sec2')") %></span> 
+	<span class="load_indicator" id="indicator_sec2" style="display: none;" ><%= image_tag 'loading2.gif' %></span></td>
+
+	<span id="select_district"></span><%= image_tag('loading2.gif', :id => "indicator_sec2_2", :style => "display: none;") %>
+	<span id="select_ward"></span>
+	<span id="s3_ind" style="display: none;"><%= image_tag 'loading2.gif' %></span>
+	</p>
+	<% end -%>
+	
+<% end -%>

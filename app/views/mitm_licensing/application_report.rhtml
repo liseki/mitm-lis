@@ -1,0 +1,94 @@
+<div class="mitm_report">
+<div id="report_stamp"><%= link_to("mitm", :action => "application", :id => @application) %>
+report generated on <%= time_date_2(Time.now) %> at <%= time_date_4(Time.now) %></div>
+
+<h2>Business Licence Application ref #<%= @application.ref %></h2>
+
+<div id="prn_licence">
+<% if @application.subsidiary -%>
+<table class="app" id="prn_licence"><tr>
+<td><p class="app_element"><span class="app_title">Subsidiary of: </span><%=h @principle.name %> </p></td>
+</tr></table>
+<% end -%>
+</div>
+
+<div id="temp_licence">
+<% if @application.processed && !@application.licence.temp_number.nil? -%>
+<table class="app" id="temp_licence"><tr>
+<td><p class="app_element"><span class="app_title">Temporary Licence #: </span><%=h @application.licence.temp_number %> </p></td>
+<td><p class="app_element"><span class="app_title">Issued: </span><%=h time_date_2(@application.licence.temp_issue_date) %></p></td>
+</tr></table>
+<% else -%>
+<table class="app" id="temp_licence"><tr><td><p class="app_element">No temporary licence issued.</p></td></tr></table>
+<% end -%>
+</div>
+
+<div id="perm_licence">
+<% if @application.processed && @application.licence.licence_type == "p" -%>
+<table class="app" id="perm_licence"><tr>
+<td><p class="app_element"><span class="app_title">Permanent Licence #: </span><%=h @application.licence.perm_number %> </p></td>
+<td><p class="app_element"><span class="app_title">Issued: </span><%=h time_date_2(@application.licence.perm_issue_date) %></p></td>
+</tr></table>
+<% else -%>
+<table class="app" id="temp_licence"><tr><td><p class="app_element">No permanent licence issued.</p></td></tr></table>
+<% end -%>
+</div>
+
+<h3>1. Applicant</h3>
+<table class="app" id="app_sec1"><tr>
+<td><p class="app_element"><span class="app_title">Type: </span><%=h @application.company.business %></p></td>
+<td><% if @application.company.business_type != "ind" -%>
+<p class="app_element"><span class="app_title"><% if @application.company.business_type == "ltd" -%>Certificate of Inc #<% else %> Registration #<% end -%>: </span><%=h @application.company.inc_or_reg_no %></p>
+<% end -%></td>
+<td><p class="app_element"><span class="app_title">TIN: </span><%=h @application.company.tin.ti_num %></p></td></tr></table>
+<table class="app"><tr>
+<td><p class="app_element"><span class="app_title">Investment: </span><%=h @application.company.investment %> (<%= show_shareholders %>)</p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Name: </span><%=h @application.company.name %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Director: </span><%=h @application.company.show_directors %></p></td></tr>
+</table>
+
+<h3 class="app">2. Address and Business Premises </h3>
+<table class="app" id="app_sec2"><tr>
+<td><p class="app_element"><span class="app_title">Ward: </span><%=h @application.company.address.ward.name %></p></td>
+<td><p class="app_element"><span class="app_title">District: </span><%=h @application.company.address.ward.district.name %></p></td>
+<td><p class="app_element"><span class="app_title">Region: </span><%=h @application.company.address.ward.district.region.name %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">P.O.Box: </span><%=h @application.company.address.p_o_box %></p></td>
+<td><p class="app_element"><span class="app_title">Street: </span><%=h @application.company.address.street %></p></td></tr>
+<tr><td><p class="app_element"><span class="app_title">Block: </span><%=h @application.company.address.block %></p></td>
+<td><p class="app_element"><span class="app_title">Plot #: </span><%=h @application.company.address.plot_no %></p></td>
+<td><p class="app_element"><span class="app_title">House #: </span><%=h @application.company.address.house_no %></p></td>
+</tr></table>
+
+<h3 class="app">3. Communication </h3>
+<table class="app" id="app_sec3"><tr>
+<td><p class="app_element"><span class="app_title">Telephone: </span><%=h @application.company.address.telephone %></p></td>
+<td><p class="app_element"><span class="app_title">Fax: </span><%=h @application.company.address.fax %></p></td>
+<td><p class="app_element"><span class="app_title">Email: </span><%=h @application.company.address.email %></p></td>
+</tr></table>
+
+<h3 class="app">4. Line of Business </h3>
+<table class="app" id="app_sec4"><tr>
+<td><p class="app_element"><%=h @application.category.name %></p></td>
+</tr></table>
+
+<h3 class="app">5. Certification </h3>
+<table class="app" id="app_sec5"><tr>
+<td><p class="app_element"><span class="app_title">Date: </span><%=h time_date_2(@application.app_date) %></p></td>
+<td><p class="app_element"><span class="app_title">Signed: </span><%=h @application.signature %></p></td>
+</tr></table>
+
+<h3 class="app">6. Accompanying Documentation </h3>
+<table class="app" id="app_sec6">
+<% if @application.attachment.cert_inc_or_reg -%><tr><td><p class="app_element">Certificate of Incorporation or Registration</p></td></tr><% end -%>
+<% if @application.attachment.memorandum -%><tr><td><p class="app_element">Memorandum and Articles of Association</p></td></tr><% end -%>
+<% if @application.attachment.tz_proof -%><tr><td><p class="app_element">Proof of Tanzanian Citizenship or Residency</p></td></tr><% end -%>
+<% if @application.attachment.att_powers -%><tr><td><p class="app_element">Powers of Attorney</p></td></tr><% end -%>
+<% if @application.attachment.premises -%><tr><td><p class="app_element">Proof of Business Premises</p></td></tr><% end -%>
+<% if @application.attachment.tin_cert -%><tr><td><p class="app_element">TIN Certificate</p></td></tr><% end -%>
+<% if @application.attachment.cal -%><tr><td><p class="app_element">Customs Agency Licence (CAL)</p></td></tr><% end -%>
+<% if @application.attachment.tal -%><tr><td><p class="app_element">Tourism Agency Licence (TAL)</p></td></tr><% end -%>
+<% if @application.attachment.prof_cert -%><tr><td><p class="app_element">Professional Certificates</p></td></tr><% end -%>
+<% if @application.attachment.air_sea_worth -%><tr><td><p class="app_element">Air/Sea Worthiness Certificate</p></td></tr><% end -%>
+<% if @application.attachment.other != "" -%><tr><td><p class="app_element"><span class="app_title">Other: </span><%= @application.attachment.other %></p></td></tr><% end -%>
+</table>
+</div>

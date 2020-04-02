@@ -1,0 +1,2 @@
+page[:district_search].replace_html :partial => "districts"
+page[:ward_search].replace_html ""

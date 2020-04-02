@@ -1,0 +1,1 @@
+page[:trends_results].replace_html :partial => "trends_results"

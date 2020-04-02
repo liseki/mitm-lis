@@ -1,0 +1,2 @@
+page['errors'].show
+page['errors'].replace_html :partial => "move_category_error"

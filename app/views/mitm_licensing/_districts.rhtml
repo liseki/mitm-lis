@@ -1,0 +1,3 @@
+<label> District: </label><%= select 'address', 'district', [["district", "0"]] + @districts.collect {|dis| [dis.name, dis.id]} %>
+<%= observe_field(:address_district, :url => {:controller => "mitm_licensing", :action => :setup_wards}, :with => "dis_id", 
+                              :loading => "new Element.show('indicator_sec2_2')", :complete => "new Element.hide('indicator_sec2_2')") %>

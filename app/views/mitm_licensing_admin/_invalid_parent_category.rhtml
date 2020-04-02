@@ -1,0 +1,11 @@
+<div class="error_msg_title">The following error<% if @category_name_blank ==  1 || @rename_blank == 1%>s<%end%> prevented the 
+<% if @func == "sub" %>creation of a new <%elsif @func == "ren" %>renaming of a <%elsif @func == "mov" %>moving of a <%else %>deletion of a <%end%>
+<%=@model_title %>!</div>
+<ul>
+	<%if @blank == 1 %><li>Sub-category name can not be blank.</li><%end%>
+	<%if @blank == 2 %><li>Category name can not be blank.</li><%end%>
+	<%if @blank == 3 %><li>Category for moving not selected.</li><%end%>
+	<li><%if @func=="sub" %>Parent category <%elsif @func=="ren"%>Category for renaming 
+  <%elsif @func=="mov"%>Destination category <%else%>Category for deletion <%end%> 
+  has not been selected.</li>
+</ul>

@@ -1,0 +1,8 @@
+<div class="error_msg_title">The following error<%if @user.errors.size > 1%>s<%end%> 
+prevented the creation of a new user!</div>
+
+<ul>
+<% @user.errors.each do |attr, msg| %>
+	<li><%= attr %> <%= msg %></li>
+<% end -%>
+</ul>

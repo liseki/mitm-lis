@@ -1,0 +1,4 @@
+page['errors'].hide
+page['search_results'].replace_html "Waiting for search."
+page['report_link'].replace_html ""
+page.select('form').each {|f| f.reset}

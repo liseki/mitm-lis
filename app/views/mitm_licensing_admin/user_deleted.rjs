@@ -1,0 +1,2 @@
+page[:notice].hide
+page[:mitm_users].replace_html :partial => "users"

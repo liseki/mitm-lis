@@ -1,0 +1,7 @@
+<div class="error_msg_title">The following error<%if @licence.errors.count > 1-%>s<%end-%> 
+prevented the issuing of a new licence!</div>
+<ul>
+	<% @licence.errors.each do |attr, msg| %>
+	<li><%= msg %></li>
+	<% end -%>
+</ul>

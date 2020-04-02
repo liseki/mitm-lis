@@ -1,0 +1,16 @@
+<div class="mitm_report">
+<div id="report_stamp"><%= link_to("mitm", :action => "index") %> 
+report generated on <%= time_date_2(Time.now) %> at <%= time_date_4(Time.now) %></div>
+
+<h3><%if @option == 2 -%><%= search_title %> 
+        <% elsif @option == 3 -%><%= search_title2 %> 
+        <% elsif @option == 4 -%><%= search_title3 %>
+        <% else -%> <%= search_title1 %><% end -%></h3>
+
+<% if @report_option == 1 -%>
+	<%= render_partial "report1" %>
+<% elsif @report_option == 2 -%>
+	<%= render_partial "report2" %>
+<% else -%>
+	<%= render_partial "report3" %>
+<%  end -%>

@@ -1,0 +1,2 @@
+page[:notice].show
+page[:notice].replace_html "#{flash[:notice]}"

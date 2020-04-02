@@ -1,0 +1,72 @@
+<% for application in @applications -%>
+	<% company = application.company -%>
+	
+	<div class="search_result">
+	<h2 class="title" id="index"><%= application.company_name %></h2>
+	
+	<h3>About the company</h3>
+	<table class="app" id="app_sec1"><tr>
+	<td><p class="app_element"><span class="app_title">Type: </span><%=h company.business %></p></td>
+	<td><% if application.business_type != "ind" -%>
+	<p class="app_element"><span class="app_title"><% if application.business_type == "ltd" -%>Certificate of Inc #<% else %> Registration #<% end -%>: </span><%=h application.inc_or_reg_no %></p>
+	<% end -%></td>
+	<td><p class="app_element"><span class="app_title">TIN: </span><%=h application.tin_number.insert(-7, '-').insert(-4, '-') %></p></td></tr></table>
+	<table class="app"><tr>
+	<td><p class="app_element"><span class="app_title">Investment: </span><%=h company.investment %> (<%= show_shareholders(company) %>)</p></td></tr>
+	<tr><td><p class="app_element"><span class="app_title">Director: </span><%=h company.show_directors %></p></td></tr>
+	<% if !company.parent_id.nil? -%>
+	<tr><td><p class="app_element"><span class="app_title">Subsidiary of: </span><%=h company.parent.name %></p></td></tr>
+	<% end -%>
+	</table>
+
+	<h3>Address</h3>
+	<table class="app" id="app_sec2"><tr>
+	<td><p class="app_element"><span class="app_title">Ward: </span><%=h application.ward_name %></p></td>
+	<td><p class="app_element"><span class="app_title">District: </span><%=h application.district_name %></p></td>
+	<td><p class="app_element"><span class="app_title">Region: </span><%=h application.region_name %></p></td></tr>
+	<tr><td><p class="app_element"><span class="app_title">P.O.Box: </span><%=h application.p_o_box %></p></td>
+	<td><p class="app_element"><span class="app_title">Street: </span><%=h application.street %></p></td></tr>
+	<tr><td><p class="app_element"><span class="app_title">Block: </span><%=h application.block %></p></td>
+	<td><p class="app_element"><span class="app_title">Plot #: </span><%=h application.plot_no %></p></td>
+	<td><p class="app_element"><span class="app_title">House #: </span><%=h application.house_no %></p></td>
+	</tr></table>
+
+	<h3>Contacts</h3>
+	<table class="app" id="app_sec3"><tr>
+	<td><p class="app_element"><span class="app_title">Telephone: </span><%=h application.telephone %></p></td>
+	<td><p class="app_element"><span class="app_title">Fax: </span><%=h application.fax %></p></td>
+	<td><p class="app_element"><span class="app_title">Email: </span><%=h application.email %></p></td>
+	</tr></table>
+	
+	<h3><% if @app_lic == "a" -%>Application<% else -%>Licence<% end -%></h3>
+	<table class="app"><tr><td><p class="app_element"><span class="app_title"><%= application.category_name %></span><br />
+	<% if @app_lic == "a" -%>
+		(<span class="app_title">Application ref #: </span><%=h (application.ref) %> 
+		<span class="app_title">Application Date: </span><%=h time_date_2(application.app_date) %>)
+	<% else -%>
+		<% if application.processed %>
+			<% if !application.temp_number.nil? && application.licence_type == "t" -%>
+				(<span class="app_title">Temporary Licence #: </span><%=h application.temp_number %> 
+				<span class="app_title">Issue Date: </span><%=h time_date_7(application.temp_issue_date) %>)
+			<% elsif !application.temp_number.nil? && application.licence_type == "p" -%>
+				(<span class="app_title">Temporary Licence #: </span><%=h application.temp_number %> 
+				<span class="app_title">Issue Date: </span><%=h time_date_7(application.temp_issue_date) %>
+			<% end -%>
+			
+			<% if application.licence_type == "p" -%>
+				<% if application.temp_number.nil? -%>
+					(<span class="app_title">Permanent Licence #: </span><%=h application.perm_number %>
+					<span class="app_title">Issue Date: </span><%=h time_date_7(application.perm_issue_date) %>)
+				<% else-%>
+					and <span class="app_title">Permanent Licence #: </span><%=h application.perm_number %>
+					<span class="app_title">Issue Date: </span><%=h time_date_7(application.perm_issue_date) %>)
+				<% end -%>
+			<% end -%>
+		<% else -%>
+			(<span class="app_title">no licence issued.</span>)
+		<% end -%>
+	<% end -%>
+  </p></td></tr></table>
+	
+	</div>	
+<% end -%>

@@ -1,0 +1,1 @@
+<%= select 'licence_application', 'main_category', [["main category", "0"]] + @main_categories.collect {|cat| [cat.name, cat.id]} %>

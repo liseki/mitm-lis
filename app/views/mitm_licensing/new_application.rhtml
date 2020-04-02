@@ -1,0 +1,24 @@
+<div id="errors" style="display: none;"></div>
+<div id="warnings" style="display: none;"></div>
+
+<div class="category_header4"><div class="category_header3">
+<div class="category_header2"><div class="category_header1">
+<h2 class="title" id="new_application">New Business Licence Application</h2>
+
+</div></div></div></div>
+<% form_remote_tag :url => {:action => 'create_new_application'}, :loading => "new Element.show('load_new_app')", 
+                                                                                                :complete => "new Element.hide('load_new_app')" do -%>
+
+<%= render_partial "application_form" %>
+
+<div id="new_app_submit4" class="category_header4"><div class="category_header3">
+<div class="category_header2"><div id="new_app_submit1" class="category_header1">
+<p id="new_app_sub_prop">1</p>
+<%= submit_tag 'submit', {:id => "submit_new_app_bt"} %>
+<span id="load_new_app" style="display:none;"><%= image_tag 'loading2.gif' %></span>
+<% end -%>
+
+<% form_remote_tag :url => {:action => "reset_new_application"} do -%>
+<%= submit_tag "reset", {:id => "reset_new_app_bt"} %>
+<% end -%>
+</div></div></div></div>

@@ -1,0 +1,26 @@
+<div class="category_header4"><div class="category_header3"><div class="category_header2"><div class="category_header1">
+<h2 class="title" id="new_user">Users</h2>
+<% if session[:mitm_user_type].to_i == 1 -%>
+<span id="new_user_bt">
+	<span><%= link_to(image_tag('new_user.gif'), :controller => "mitm_licensing_admin", :action => "new_user") %></span>
+	<span id="change_root"><%= link_to(image_tag('change_root.gif'), :controller => "mitm_licensing_admin", :action => "change_root_password") %></span>
+</span>
+<% end -%>
+</div></div></div></div>
+
+<div class="categories4"><div class="categories3"><div class="categories2"><div class="categories1">
+<div id="notice" style="display:none;"></div>
+<div id="mitm_users">
+<table id="users" class="mitm">
+<tr><th class="id">#</th><th class="name">name</th><th class="type">user type</th><th class="since">since</th><th class="remove"></th></tr>
+<% for i in 0..@users.size - 1 -%>
+<tr><td class="id"><%=h i + 1 %></td><td class="name"><%=h @users[i].name %></td><td class="type"><%=h @users[i].type %></td>
+<td class="since"><%=h time_date_2(@users[i].created_at) %></td>
+<td class="remove"><% if @users[i].id != session[:mitm_user_id] && session[:mitm_user_type].to_i == 1 -%>
+<%= link_to_remote(image_tag('remove.gif'), :url => {:action => "destroy_user", :id => @users[i]}, 
+            :loading => "new Element.show('del_user_ind#{i}')", :complete => "new Element.hide('del_user_ind#{i}')") %> 
+  <span id="del_user_ind<%=i%>" style="display: none;"><%= image_tag 'loading.gif' %></span> <% end -%></td></tr>
+<% end -%>
+</table></div>
+
+</div></div></div></div>

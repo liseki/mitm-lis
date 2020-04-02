@@ -1,0 +1,15 @@
+<div class="error_msg_title">There was an error with your search input!</div>
+<ul>
+<% if @element == 1 -%>
+<li>Invalid Company name.</li>
+
+<% elsif @element == 2 -%>
+<li>Invalid Tin number.</li>
+
+<% elsif @element == 3 -%>
+<li>Invalid Certificate of Incorporation or Registration number.</li>
+
+<% elsif @element == 4 -%>
+<li>Invalid Director name.</li>
+<% end -%>
+</ul>

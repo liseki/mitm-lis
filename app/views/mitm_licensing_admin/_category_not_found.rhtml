@@ -1,0 +1,14 @@
+<div class="error_msg_title">The following exception prevented the 
+<% if @func == "sub" %>creation of a new <%elsif @func == "ren" %>renaming of a <%elsif @func == "mov" %>moving of a <%else %>deletion of a <%end%>
+<%=@model_title %>!</div>
+<ul>
+	<% if @func == "sub" -%>
+    <li>The parent category could not be found.</li>
+  <% elsif @func == "ren" -%>
+    <li>The category could not be found.</li>
+  <% elsif @func == "mov" -%>
+    <li>Either one or both of the categories could not be found.</li>
+  <% elsif @func == "del" -%>
+    <li>The category could not be found.</li>  
+  <% end -%>
+</ul>

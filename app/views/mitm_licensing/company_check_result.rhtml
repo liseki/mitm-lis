@@ -1,0 +1,7 @@
+<% if @companies.size > 0 -%>
+  <% for company in @companies -%>
+    <%= link_to company.name, :action => "company", :id => company %><br />
+  <% end -%>
+<% else -%>
+  <%= params[:name] %> not found.
+<% end -%>

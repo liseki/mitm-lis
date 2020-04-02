@@ -1,0 +1,1 @@
+<label>Ward: </label><%= select 'address', 'ward_id', [["ward", "0"]] + @wards.collect {|wrd| [wrd.name, wrd.id]} %>

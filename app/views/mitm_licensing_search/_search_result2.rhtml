@@ -1,0 +1,45 @@
+<h3><%if @option == 2 -%><%= search_title %> <% elsif @option == 3 -%> <%= search_title2 %> <%else-%> <%= search_title3 %><% end -%>
+<span id="search_result_indicator" style="display: none;"><%= image_tag 'loading.gif' %></span></h3>
+<table id="applications" class="mitm">
+<tr><th class="ref">ref #</th><th class="date"><%if @app_lic == "a"-%>applied<%else-%>issued<%end-%></th>
+<th class="line">business line</th><th class="company">company</th></tr>
+
+<% for application in @applications -%>
+<tr><td class="ref"><%= link_to application.ref, :controller => 'mitm_licensing', :action => 'application', :id => application.id %></td>
+<td class="date">
+	<%if @app_lic == "a"-%><%=h time_date_2(application.app_date) %>
+	<%elsif @app_lic == "t"-%><%=h time_date_7(application.temp_issue_date) %>
+	<%elsif @app_lic == "p"-%><%=h time_date_7(application.perm_issue_date) %><%end-%></td>
+<td class="line"><%=h application.category_name %></td>
+<td class="company"><%=h application.company_name %></td></tr>
+<% end -%>
+</table>
+
+<div class="list_links">
+<% if @applications_pages.page_count > 1 -%>
+      <% for page in @applications_pages -%>
+            <% if page.number != @page -%>
+                  <% if @option == 2 -%>
+                        <%= link_to_remote(page.number, :url => {:action => "search", :option => @option, 
+                                          :element => @element, :app_lic => @app_lic, :input => @input, :page => page.number}, 
+                                          :loading => "new Element.show('search_result_indicator')", 
+                                          :complete => "new Element.hide('search_result_indicator')") %> 
+                  <% elsif @option == 3 -%>
+                        <%= link_to_remote(page.number, :url => {:action => "search", :option => @option, 
+                                          :app_lic => @app_lic, :start_date => @date1, :end_date => @date2, :b_type => @b, 
+                                          :i_type => @i, :cat => @cat, :reg => @reg, :dis => @dis, :page => page.number}, 
+                                          :loading => "new Element.show('search_result_indicator')", 
+                                          :complete => "new Element.hide('search_result_indicator')") %> 
+			<% elsif @option == 4 -%>
+                        <%= link_to_remote(page.number, :url => {:action => "search", :option => @option, 
+                                          :app_lic => @app_lic, :start_date => @date1, :end_date => @date2, :cat => @cat, :reg => @reg, 
+							:dis => @dis, :cty => @cty, :i_type => @i, :page => page.number}, 
+                                          :loading => "new Element.show('search_result_indicator')", 
+                                          :complete => "new Element.hide('search_result_indicator')") %> 
+                  <% end -%>
+            <% else -%>
+                  <span id="current_page"><%= page.number %></span>
+            <% end -%>
+      <% end -%>
+<% end -%>
+</div>
